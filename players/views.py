@@ -8,7 +8,7 @@ from .models import Player
 
 
 class PlayerListView(View):
-    template_name = 'players/list_of_players.html'
+    template_name = 'players/all_players.html'
     model = Player
     context_object_name = 'all_players'
 
