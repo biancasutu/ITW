@@ -21,5 +21,5 @@ from players import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('players', include('players.urls'))  # include numele aplicatiei + python file (in acest caz este urls)
+    path('players/', include('players.urls'))  # include numele aplicatiei + python file (in acest caz este urls)
 ]

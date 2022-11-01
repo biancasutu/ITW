@@ -4,5 +4,5 @@ from players import views
 
 
 urlpatterns = [
-    path('all', views.PlayerListView.as_view(), name='all_players'),
+    path('', views.PlayerListView.as_view(), name='all_players'),  # name = identificator pentru template ul din clasa PlayerListView
 ]
