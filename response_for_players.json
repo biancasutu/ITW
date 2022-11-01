@@ -1,0 +1,1371 @@
+{
+  "generated_at": "2022-11-01T20:14:15+00:00",
+  "competitor": {
+    "id": "sr:competitor:89320",
+    "name": "Ivashka, Ilya",
+    "country": "Neutral",
+    "abbreviation": "IVA",
+    "gender": "male"
+  },
+  "info": {
+    "pro_year": 2013,
+    "handedness": "right",
+    "highest_singles_ranking": 40,
+    "highest_doubles_ranking": 340,
+    "weight": 84,
+    "height": 193,
+    "date_of_birth": "1994-02-24",
+    "highest_singles_ranking_date": "06.2022",
+    "highest_doubles_ranking_date": "08.2016"
+  },
+  "competitor_rankings": [
+    {
+      "rank": 73,
+      "movement": -1,
+      "points": 730,
+      "competitor_id": "sr:competitor:89320",
+      "name": "WTA",
+      "type": "singles",
+      "race_ranking": false
+    },
+    {
+      "rank": 78,
+      "movement": -2,
+      "points": 685,
+      "competitor_id": "sr:competitor:89320",
+      "name": "WTA",
+      "type": "singles",
+      "race_ranking": true
+    }
+  ],
+  "periods": [
+    {
+      "year": 2022,
+      "surfaces": [
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 8,
+            "competitions_won": 0,
+            "matches_played": 14,
+            "matches_won": 6
+          }
+        },
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 6,
+            "competitions_won": 0,
+            "matches_played": 14,
+            "matches_won": 8
+          }
+        },
+        {
+          "type": "grass",
+          "statistics": {
+            "competitions_played": 3,
+            "competitions_won": 0,
+            "matches_played": 7,
+            "matches_won": 4
+          }
+        },
+        {
+          "type": "red_clay",
+          "statistics": {
+            "competitions_played": 7,
+            "competitions_won": 0,
+            "matches_played": 12,
+            "matches_won": 5
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 24,
+        "competitions_won": 0,
+        "matches_played": 47,
+        "matches_won": 23
+      }
+    },
+    {
+      "year": 2021,
+      "surfaces": [
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 5,
+            "competitions_won": 0,
+            "matches_played": 10,
+            "matches_won": 6
+          }
+        },
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 7,
+            "competitions_won": 1,
+            "matches_played": 20,
+            "matches_won": 14
+          }
+        },
+        {
+          "type": "grass",
+          "statistics": {
+            "competitions_played": 4,
+            "competitions_won": 0,
+            "matches_played": 15,
+            "matches_won": 10
+          }
+        },
+        {
+          "type": "red_clay",
+          "statistics": {
+            "competitions_played": 5,
+            "competitions_won": 0,
+            "matches_played": 18,
+            "matches_won": 13
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 21,
+        "competitions_won": 1,
+        "matches_played": 63,
+        "matches_won": 43
+      }
+    },
+    {
+      "year": 2020,
+      "surfaces": [
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 3,
+            "competitions_won": 1,
+            "matches_played": 12,
+            "matches_won": 10
+          }
+        },
+        {
+          "type": "carpet_indoor",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 4,
+            "matches_won": 3
+          }
+        },
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 5,
+            "competitions_won": 1,
+            "matches_played": 16,
+            "matches_won": 12
+          }
+        },
+        {
+          "type": "red_clay",
+          "statistics": {
+            "competitions_played": 5,
+            "competitions_won": 0,
+            "matches_played": 8,
+            "matches_won": 3
+          }
+        },
+        {
+          "type": "unknown",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 1,
+            "matches_won": 0
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 15,
+        "competitions_won": 2,
+        "matches_played": 41,
+        "matches_won": 28
+      }
+    },
+    {
+      "year": 2019,
+      "surfaces": [
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 9,
+            "competitions_won": 0,
+            "matches_played": 17,
+            "matches_won": 8
+          }
+        },
+        {
+          "type": "red_clay",
+          "statistics": {
+            "competitions_played": 2,
+            "competitions_won": 0,
+            "matches_played": 5,
+            "matches_won": 3
+          }
+        },
+        {
+          "type": "carpet_indoor",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 2,
+            "matches_won": 1
+          }
+        },
+        {
+          "type": "unknown",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 2,
+            "matches_won": 1
+          }
+        },
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 13,
+            "competitions_won": 0,
+            "matches_played": 30,
+            "matches_won": 15
+          }
+        },
+        {
+          "type": "grass",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 3,
+            "matches_won": 2
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 27,
+        "competitions_won": 0,
+        "matches_played": 59,
+        "matches_won": 30
+      }
+    },
+    {
+      "year": 2018,
+      "surfaces": [
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 6,
+            "competitions_won": 0,
+            "matches_played": 21,
+            "matches_won": 16
+          }
+        },
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 12,
+            "competitions_won": 1,
+            "matches_played": 26,
+            "matches_won": 15
+          }
+        },
+        {
+          "type": "unknown",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 4,
+            "matches_won": 1
+          }
+        },
+        {
+          "type": "grass",
+          "statistics": {
+            "competitions_played": 3,
+            "competitions_won": 0,
+            "matches_played": 6,
+            "matches_won": 3
+          }
+        },
+        {
+          "type": "red_clay",
+          "statistics": {
+            "competitions_played": 6,
+            "competitions_won": 0,
+            "matches_played": 15,
+            "matches_won": 8
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 28,
+        "competitions_won": 1,
+        "matches_played": 72,
+        "matches_won": 43
+      }
+    },
+    {
+      "year": 2017,
+      "surfaces": [
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 11,
+            "competitions_won": 1,
+            "matches_played": 22,
+            "matches_won": 13
+          }
+        },
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 6,
+            "competitions_won": 0,
+            "matches_played": 13,
+            "matches_won": 7
+          }
+        },
+        {
+          "type": "grass",
+          "statistics": {
+            "competitions_played": 2,
+            "competitions_won": 0,
+            "matches_played": 2,
+            "matches_won": 0
+          }
+        },
+        {
+          "type": "red_clay",
+          "statistics": {
+            "competitions_played": 4,
+            "competitions_won": 0,
+            "matches_played": 9,
+            "matches_won": 5
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 23,
+        "competitions_won": 1,
+        "matches_played": 46,
+        "matches_won": 25
+      }
+    },
+    {
+      "year": 2016,
+      "surfaces": [
+        {
+          "type": "carpet_indoor",
+          "statistics": {
+            "competitions_played": 2,
+            "competitions_won": 0,
+            "matches_played": 5,
+            "matches_won": 3
+          }
+        },
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 7,
+            "competitions_won": 0,
+            "matches_played": 13,
+            "matches_won": 7
+          }
+        },
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 10,
+            "competitions_won": 2,
+            "matches_played": 34,
+            "matches_won": 26
+          }
+        },
+        {
+          "type": "grass",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 1,
+            "matches_won": 0
+          }
+        },
+        {
+          "type": "red_clay",
+          "statistics": {
+            "competitions_played": 3,
+            "competitions_won": 0,
+            "matches_played": 8,
+            "matches_won": 5
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 23,
+        "competitions_won": 2,
+        "matches_played": 61,
+        "matches_won": 41
+      }
+    },
+    {
+      "year": 2015,
+      "surfaces": [
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 14,
+            "competitions_won": 0,
+            "matches_played": 46,
+            "matches_won": 29
+          }
+        },
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 4,
+            "competitions_won": 0,
+            "matches_played": 10,
+            "matches_won": 5
+          }
+        },
+        {
+          "type": "red_clay",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 8,
+            "matches_won": 6
+          }
+        },
+        {
+          "type": "unknown",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 5,
+            "matches_won": 4
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 20,
+        "competitions_won": 0,
+        "matches_played": 69,
+        "matches_won": 44
+      }
+    },
+    {
+      "year": 2014,
+      "surfaces": [
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 3,
+            "competitions_won": 0,
+            "matches_played": 15,
+            "matches_won": 9
+          }
+        },
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 4,
+            "competitions_won": 0,
+            "matches_played": 15,
+            "matches_won": 8
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 7,
+        "competitions_won": 0,
+        "matches_played": 30,
+        "matches_won": 17
+      }
+    },
+    {
+      "year": 2013,
+      "surfaces": [
+        {
+          "type": "hardcourt_indoor",
+          "statistics": {
+            "competitions_played": 1,
+            "competitions_won": 0,
+            "matches_played": 1,
+            "matches_won": 0
+          }
+        },
+        {
+          "type": "hardcourt_outdoor",
+          "statistics": {
+            "competitions_played": 2,
+            "competitions_won": 0,
+            "matches_played": 12,
+            "matches_won": 9
+          }
+        }
+      ],
+      "statistics": {
+        "competitions_played": 3,
+        "competitions_won": 0,
+        "matches_played": 13,
+        "matches_won": 9
+      }
+    }
+  ],
+  "competitions_played": [
+    {
+      "id": "sr:competition:2100",
+      "name": "Davis Cup",
+      "type": "mixed",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:2555",
+      "name": "Wimbledon Men Singles",
+      "parent_id": "sr:competition:2553",
+      "type": "singles",
+      "gender": "men",
+      "level": "grand_slam"
+    },
+    {
+      "id": "sr:competition:2567",
+      "name": "Australian Open Men Singles",
+      "parent_id": "sr:competition:2565",
+      "type": "singles",
+      "gender": "men",
+      "level": "grand_slam"
+    },
+    {
+      "id": "sr:competition:2579",
+      "name": "French Open Men Singles",
+      "parent_id": "sr:competition:2577",
+      "type": "singles",
+      "gender": "men",
+      "level": "grand_slam"
+    },
+    {
+      "id": "sr:competition:2591",
+      "name": "US Open Men Singles",
+      "parent_id": "sr:competition:2589",
+      "type": "singles",
+      "gender": "men",
+      "level": "grand_slam"
+    },
+    {
+      "id": "sr:competition:2661",
+      "name": "ATP Paris, France Men Singles",
+      "parent_id": "sr:competition:2659",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:2667",
+      "name": "ATP Dubai, UAE Men Singles",
+      "parent_id": "sr:competition:2665",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_500"
+    },
+    {
+      "id": "sr:competition:2679",
+      "name": "ATP Rotterdam, Netherlands Men Singles",
+      "parent_id": "sr:competition:2677",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_500"
+    },
+    {
+      "id": "sr:competition:2721",
+      "name": "ATP Marseille, France Men Singles",
+      "parent_id": "sr:competition:2719",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:2739",
+      "name": "ATP Indian Wells, USA Men Singles",
+      "parent_id": "sr:competition:2737",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:2745",
+      "name": "ATP Miami, USA Men Singles",
+      "parent_id": "sr:competition:2743",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:2769",
+      "name": "ATP Barcelona, Spain Men Singles",
+      "parent_id": "sr:competition:2767",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_500"
+    },
+    {
+      "id": "sr:competition:2775",
+      "name": "ATP Stuttgart, Germany Men Singles",
+      "parent_id": "sr:competition:2773",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:2781",
+      "name": "ATP Rome, Italy Men Singles",
+      "parent_id": "sr:competition:2779",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:2787",
+      "name": "ATP Madrid, Spain Men Singles",
+      "parent_id": "sr:competition:2785",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:2835",
+      "name": "ATP Munich, Germany Men Singles",
+      "parent_id": "sr:competition:2833",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:2859",
+      "name": "ATP Halle, Germany Men Singles",
+      "parent_id": "sr:competition:2857",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_500"
+    },
+    {
+      "id": "sr:competition:2871",
+      "name": "ATP S-Hertogenbosch, Netherlands Men Singles",
+      "parent_id": "sr:competition:2869",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:2883",
+      "name": "ATP Newport, USA Men Singles",
+      "parent_id": "sr:competition:2881",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:2971",
+      "name": "ATP Washington, USA Men Singles",
+      "parent_id": "sr:competition:2969",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_500"
+    },
+    {
+      "id": "sr:competition:2983",
+      "name": "ATP Cincinnati, USA Men Singles",
+      "parent_id": "sr:competition:2981",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:2995",
+      "name": "ATP Toronto, Canada Men Singles",
+      "parent_id": "sr:competition:2993",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:3025",
+      "name": "ATP Beijing, China Men Singles",
+      "parent_id": "sr:competition:3023",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_500"
+    },
+    {
+      "id": "sr:competition:3067",
+      "name": "ATP Moscow, Russia Men Singles",
+      "parent_id": "sr:competition:3065",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:3091",
+      "name": "ATP Stockholm, Sweden Men Singles",
+      "parent_id": "sr:competition:3089",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:3103",
+      "name": "ATP Vienna, Austria Men Singles",
+      "parent_id": "sr:competition:3101",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_500"
+    },
+    {
+      "id": "sr:competition:3109",
+      "name": "ATP St. Petersburg, Russia Men Singles",
+      "parent_id": "sr:competition:3107",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:3121",
+      "name": "ATP Monte Carlo, Monaco Men Singles",
+      "parent_id": "sr:competition:3119",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:3245",
+      "name": "ATP Atlanta, USA Men Singles",
+      "parent_id": "sr:competition:3243",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:3287",
+      "name": "ATP Challenger Bergamo, Italy Men Singles",
+      "parent_id": "sr:competition:3285",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3327",
+      "name": "ATP Challenger Cherbourg, France Men Singles",
+      "parent_id": "sr:competition:3325",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3343",
+      "name": "ATP Challenger Kazan, Russia Men Singles",
+      "parent_id": "sr:competition:3341",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3391",
+      "name": "ATP Challenger St. Brieuc, France Men Singles",
+      "parent_id": "sr:competition:3389",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3469",
+      "name": "ATP Challenger Fergana, Uzbekistan Men Singles",
+      "parent_id": "sr:competition:3467",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3499",
+      "name": "ATP Challenger Ostrava, Czech Republic Men Singles",
+      "parent_id": "sr:competition:3497",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3511",
+      "name": "ATP Challenger Prostejov, Czech Republic Men Singles",
+      "parent_id": "sr:competition:3509",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3655",
+      "name": "ATP Challenger Recanati, Italy Men Singles",
+      "parent_id": "sr:competition:3653",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3715",
+      "name": "ATP Challenger Segovia, Spain Men Singles",
+      "parent_id": "sr:competition:3713",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3721",
+      "name": "ATP Challenger Vancouver, Canada Men Singles",
+      "parent_id": "sr:competition:3719",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3733",
+      "name": "ATP Challenger Samarkand, Uzbekistan Men Singles",
+      "parent_id": "sr:competition:3731",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3745",
+      "name": "ATP Challenger Karshi, Uzbekistan Men Singles",
+      "parent_id": "sr:competition:3743",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3819",
+      "name": "ATP Challenger St. Remy, France Men Singles",
+      "parent_id": "sr:competition:3817",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3873",
+      "name": "ATP Challenger Mons, Belgium Men Singles",
+      "parent_id": "sr:competition:3871",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3899",
+      "name": "ATP Challenger Rennes, France Men Singles",
+      "parent_id": "sr:competition:3897",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3915",
+      "name": "ATP Challenger Orleans, France Men Singles",
+      "parent_id": "sr:competition:3913",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3921",
+      "name": "ATP Challenger Nur-Sultan, Kazakhstan Men Singles",
+      "parent_id": "sr:competition:3919",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3927",
+      "name": "ATP Challenger Eckental, Germany Men Singles",
+      "parent_id": "sr:competition:3925",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3957",
+      "name": "ATP Challenger Ortisei, Italy Men Singles",
+      "parent_id": "sr:competition:3955",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3963",
+      "name": "ATP Challenger Bratislava, Slovakia Men Singles",
+      "parent_id": "sr:competition:3961",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3987",
+      "name": "ATP Challenger Helsinki, Finland Men Singles",
+      "parent_id": "sr:competition:3985",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:3999",
+      "name": "ATP Montpellier, France Men Singles",
+      "parent_id": "sr:competition:3997",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:4329",
+      "name": "ATP Winston Salem, USA Men Singles",
+      "parent_id": "sr:competition:4327",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:4393",
+      "name": "ITF Men Stuttgart-Stammheim, Germany Men Singles",
+      "parent_id": "sr:competition:4391",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:4829",
+      "name": "ITF Men Chengdu, China Men Singles",
+      "parent_id": "sr:competition:4827",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:4907",
+      "name": "ATP Challenger Bangkok, Thailand Men Singles",
+      "parent_id": "sr:competition:4905",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:4931",
+      "name": "ATP Challenger Prague, Czech Republic Men Singles",
+      "parent_id": "sr:competition:4929",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:5161",
+      "name": "Korea F2 Men Singles",
+      "parent_id": "sr:competition:5159",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:5167",
+      "name": "ATP Challenger Nottingham, Great Britain Men Singles",
+      "parent_id": "sr:competition:5165",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:5791",
+      "name": "ATP Challenger Izmir, Turkey Men Singles",
+      "parent_id": "sr:competition:5789",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:5803",
+      "name": "ATP Challenger Istanbul, Turkey Men Singles",
+      "parent_id": "sr:competition:5801",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:6329",
+      "name": "ITF Men Astana, Kazakhstan Men Singles",
+      "parent_id": "sr:competition:6327",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:6437",
+      "name": "ITF Men Schwieberdingen, Germany Men Singles",
+      "parent_id": "sr:competition:6435",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:6803",
+      "name": "ITF Men Herzliya, Israel Men Singles",
+      "parent_id": "sr:competition:6801",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:7013",
+      "name": "ITF Men Shymkent, Kazakhstan Men Singles",
+      "parent_id": "sr:competition:7011",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:7343",
+      "name": "ITF Men Daegu, South Korea Men Singles",
+      "parent_id": "sr:competition:7341",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:7631",
+      "name": "ATP Eastbourne, Great Britain Men Singles",
+      "parent_id": "sr:competition:7629",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:7745",
+      "name": "ITF Men Palma del Rio, Spain Men Singles",
+      "parent_id": "sr:competition:7743",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:7949",
+      "name": "ATP Challenger Anning, China Men Singles",
+      "parent_id": "sr:competition:7947",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:8183",
+      "name": "Olympic Tournament Men Singles",
+      "parent_id": "sr:competition:8181",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:8285",
+      "name": "ATP Montreal, Canada Men Singles",
+      "parent_id": "sr:competition:8283",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_1000"
+    },
+    {
+      "id": "sr:competition:8477",
+      "name": "ITF Men Istanbul, Turkey Men Singles",
+      "parent_id": "sr:competition:8475",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:8645",
+      "name": "ATP Challenger Tashkent, Uzbekistan Men Singles",
+      "parent_id": "sr:competition:8643",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:8735",
+      "name": "ITF Men Danderyd-Stockholm, Sweden Men Singles",
+      "parent_id": "sr:competition:8733",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:8801",
+      "name": "ITF Men Falun, Sweden Men Singles",
+      "parent_id": "sr:competition:8799",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:9215",
+      "name": "ATP Challenger Tyumen, Russia Men Singles",
+      "parent_id": "sr:competition:9213",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:10073",
+      "name": "ATP Challenger Portoroz, Slovenia Men Singles",
+      "parent_id": "sr:competition:10071",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:10355",
+      "name": "ITF Men Minsk, Belarus Men Singles",
+      "parent_id": "sr:competition:10353",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:10823",
+      "name": "ATP Challenger Mouilleron-Le-Captif, France Men Singles",
+      "parent_id": "sr:competition:10821",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:11123",
+      "name": "ATP Shenzhen, China Men Singles",
+      "parent_id": "sr:competition:11121",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:11267",
+      "name": "ITF Men Kish, Iran Men Singles",
+      "parent_id": "sr:competition:11265",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:11421",
+      "name": "ITF Men Karshi, Uzbekistan Men Singles",
+      "parent_id": "sr:competition:11419",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:11427",
+      "name": "ATP Challenger Shenzhen, China Men Singles",
+      "parent_id": "sr:competition:11425",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:11577",
+      "name": "ATP Challenger Mestre, Italy Men Singles",
+      "parent_id": "sr:competition:11575",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:12057",
+      "name": "ATP Challenger Pune, India Men Singles",
+      "parent_id": "sr:competition:12055",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:12201",
+      "name": "ATP Challenger Happy Valley, Australia Men Singles",
+      "parent_id": "sr:competition:12199",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:12285",
+      "name": "ATP Challenger Wroclaw, Poland Men Singles",
+      "parent_id": "sr:competition:12283",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:12315",
+      "name": "ATP Geneva, Switzerland Men Singles",
+      "parent_id": "sr:competition:12313",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:12321",
+      "name": "ATP Istanbul, Turkey Men Singles",
+      "parent_id": "sr:competition:12319",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:12429",
+      "name": "ATP Challenger Ilkley, Great Britain Men Singles",
+      "parent_id": "sr:competition:12427",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:12459",
+      "name": "ATP Challenger Moscow, Russia Men Singles",
+      "parent_id": "sr:competition:12457",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:12531",
+      "name": "ITF Men Bukhara, Uzbekistan Men Singles",
+      "parent_id": "sr:competition:12529",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:13131",
+      "name": "ATP Challenger Bengaluru, India Men Singles",
+      "parent_id": "sr:competition:13129",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:13161",
+      "name": "ATP Challenger Canberra, Australia Men Singles",
+      "parent_id": "sr:competition:13159",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:13389",
+      "name": "ATP Sofia, Bulgaria Men Singles",
+      "parent_id": "sr:competition:13387",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:13443",
+      "name": "ATP Antwerp, Belgium Men Singles",
+      "parent_id": "sr:competition:13441",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:13485",
+      "name": "ATP Challenger Zhuhai, China Men Singles",
+      "parent_id": "sr:competition:13483",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:13563",
+      "name": "ATP Marrakech, Morocco Men Singles",
+      "parent_id": "sr:competition:13561",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:14079",
+      "name": "ATP Challenger Qingdao, China Men Singles",
+      "parent_id": "sr:competition:14077",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:14127",
+      "name": "ATP Challenger Budapest, Hungary Men Singles",
+      "parent_id": "sr:competition:14125",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:14674",
+      "name": "ATP Challenger Koblenz, Germany Men Singles",
+      "parent_id": "sr:competition:14672",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:14794",
+      "name": "ATP Challenger Quanzhou, China Men Singles",
+      "parent_id": "sr:competition:14792",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:14907",
+      "name": "ITF Switzerland F2, Men Singles",
+      "parent_id": "sr:competition:15902",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:15994",
+      "name": "ITF Switzerland F1, Men Singles",
+      "parent_id": "sr:competition:15886",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:17770",
+      "name": "ITF Uzbekistan F2, Men Singles",
+      "parent_id": "sr:competition:17766",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:17854",
+      "name": "ITF Uzbekistan F1, Men Singles",
+      "parent_id": "sr:competition:17852",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:22839",
+      "name": "ATP Pune, India Men Singles",
+      "parent_id": "sr:competition:22837",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:23245",
+      "name": "ATP Challenger Qujing, China Men Singles",
+      "parent_id": "sr:competition:23243",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:26126",
+      "name": "ATP Challenger Cassis, France Men Singles",
+      "parent_id": "sr:competition:26124",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:28203",
+      "name": "ATP Challenger Phoenix, USA Men Singles",
+      "parent_id": "sr:competition:28201",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:29888",
+      "name": "ATP Challenger Nur-Sultan II, Kazakhstan Men Singles",
+      "parent_id": "sr:competition:29886",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:31475",
+      "name": "ATP Mallorca, Spain Men Singles",
+      "parent_id": "sr:competition:31473",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:33179",
+      "name": "ATP Astana, Kazakhstan Men Singles",
+      "parent_id": "sr:competition:33177",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_500"
+    },
+    {
+      "id": "sr:competition:33706",
+      "name": "ATP Marbella, Spain Men Singles",
+      "parent_id": "sr:competition:33704",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    },
+    {
+      "id": "sr:competition:33768",
+      "name": "ATP Challenger Biella 4, Italy Men Singles",
+      "parent_id": "sr:competition:33766",
+      "type": "singles",
+      "gender": "men"
+    },
+    {
+      "id": "sr:competition:37469",
+      "name": "ATP Gijon, Spain Men Singles",
+      "parent_id": "sr:competition:37467",
+      "type": "singles",
+      "gender": "men",
+      "level": "atp_250"
+    }
+  ]
+}

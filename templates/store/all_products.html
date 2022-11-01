@@ -5,6 +5,31 @@
     <title>all_products</title>
 </head>
 <body>
-<p>Tralala</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Size</th>
+        <th scope="col">Number of products available</th>
+        <th scope="col">Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for product in all_products %}
+        <tr>
+            <th scope="row">1</th>
+            <td>{{ product.name_of_product }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.description_of_product }}</td>
+            <td>{{ product.sizet }}</td>
+            <td>{{ product.number_of_products }}</td>
+            <td>{{ product.prod_type }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 </body>
 </html>
