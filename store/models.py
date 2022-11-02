@@ -8,6 +8,7 @@ class Store(models.Model):
     size = models.CharField(max_length=2)
     number_of_products = models.IntegerField()
     prod_type = models.CharField(max_length=30, default='T-Shirt')
+    genre = models.CharField(max_length=1, default='M')
 
 
 

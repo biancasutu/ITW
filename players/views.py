@@ -23,7 +23,7 @@ class PlayerListView(ListView):
                 response = requests.get(url)
                 data = response.json()
                 meals = data['players']
-                for player in all_players:
+                # for player in all_players:
             #         player_data = Player(
             #             name=competitor['strMeal'],
             #             category=i['strCategory'],

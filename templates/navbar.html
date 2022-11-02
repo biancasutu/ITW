@@ -21,12 +21,12 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="{% url 'all_products' prod_type='all products' %}" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
-                        Products
+                        Store
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'all_products' prod_type='all products' %}">All products</a></li>
+{#                        <li><a class="dropdown-item" href="{% url 'all_products' prod_type='all products' %}">All products</a></li>#}
                         <li><a class="dropdown-item" href="{% url 'all_products' prod_type='T-Shirt' %}">T-Shirts</a></li>
                         <li><a class="dropdown-item" href="{% url 'all_products' prod_type='Shirt' %}">Shorts</a></li>
                         <li><a class="dropdown-item" href="{% url 'all_products' prod_type='Rackets' %}">Rackets</a></li>
