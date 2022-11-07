@@ -46,22 +46,20 @@
                                     <li><a class="dropdown-item" href="{% url 'filtered_products' gender='M' prod_type='Shorts' %}">Shorts</a>
                                     </li>
                                 </ul>
-                        <li><a class="dropdown-item" href="#">Accessories</a>
+                                <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='all' %}">Accessories</a>
                             <ul class="dropdown-submenu">
-                                <li><a class="dropdown-item" href="{% url 'all_products' prod_type='Rackets' %}">Rackets</a></li>
-                                <li><a class="dropdown-item" href="#">Headbands</a></li>
-                                    </ul>
-                                </li>
+                               <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='Rackets' %}">Rackets</a></li>
+                                <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='Headbands' %}">Headbands</a></li>
                             </ul>
-                        </li>
+                                </li>
                     </ul>
                 </li>
+                    </ul>
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
-    </div>
     </div>
 </nav>

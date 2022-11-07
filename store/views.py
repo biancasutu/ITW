@@ -26,11 +26,11 @@ class StoreClothesListView(ListView):
         return render(request, 'store/all_products.html', {'all_products': context})
 
 
-class StoreAccessoriesListView(ListView):
-    template_name = 'store/all_products.html'
-    model = StoreAccessories
-    context_object_name = 'all_products'
+def get_filtered(request, acc_name):
+    if acc_name in ['Rackets','Headbands']:
+        context = StoreAccessories.objects.filter(prod_type=acc_name)
+        return render(request, 'store/accessories.html', {'all_accessories': context})
 
-    # def get(self,request,*args, **kwargs):
-    #     if self.kwargs.get('prod_type') == 'Rackets' or self.kwargs.get('prod_type') == 'Headband':
-    #         context = StoreAccessories.objects.filter()
+    context = StoreAccessories.objects.all()
+
+    return render(request, 'store/accessories.html', {'all_accessories': context})
