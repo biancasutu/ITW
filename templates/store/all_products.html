@@ -1,80 +1,23 @@
 {% extends 'base.html' %}
 {% block title %} Players {% endblock %}
 {% block content %}
-    <div class="row" style="padding-top:30px;">
-    <div class="col">
-    <div class="panel-group">
-        <div class="panel panel-default">
-        <div class="panel-heading">  Woman's Products</div>
-            <div class="panel-body">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Size</th>
-                        <th scope="col">Number of products available</th>
-                        <th scope="col">Type</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for product in all_products %}
-                        {% if  product.genre == 'F' %}
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>{{ product.name_of_product }}</td>
-                                <td>{{ product.price }}</td>
-                                <td>{{ product.description_of_product }}</td>
-                                <td>{{ product.sizet }}</td>
-                                <td>{{ product.number_of_products }}</td>
-                                <td>{{ product.prod_type }}</td>
-                            </tr>
-                        {% endif %}
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
+    {% for product in all_products %}
+         <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
+            <p class="card-text">Product size: {{ product.size}}</p>
+             <p class="card-text">Product Type: {{ product.prod_type }}</p>
+            <a href="#" class="btn btn-primary">ADD</a>
         </div>
     </div>
-    </div>
-    <div class="col">
-    <div class="panel-group">
-        <div class="panel panel-default">
-        <div class="panel-heading"> Man's Products</div>
-            <div class="panel-body">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Size</th>
-                        <th scope="col">Number of products available</th>
-                        <th scope="col">Type</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for product in all_products %}
-                        {% if  product.genre == 'M' %}
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>{{ product.name_of_product }}</td>
-                                <td>{{ product.price }}</td>
-                                <td>{{ product.description_of_product }}</td>
-                                <td>{{ product.sizet }}</td>
-                                <td>{{ product.number_of_products }}</td>
-                                <td>{{ product.prod_type }}</td>
-                            </tr>
-                        {% endif %}
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
+    <tr>
+    <th scope="row">1</th>
+    <td>{{ product.name_of_product }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.description_of_product }}</td>
+    <td>{{ product.size }}</td>
+    <td>{{ product.number_of_products }}</td>
+    <td>{{ product.prod_type }}</td>
+    {% endfor %}
 {% endblock %}

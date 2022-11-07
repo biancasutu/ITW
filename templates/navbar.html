@@ -17,20 +17,43 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{% url 'all_players' %}">Players</a></li>
-                        {#            <li><hr class="dropdown-divider"></li>#}
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{% url 'all_products' prod_type='all products' %}" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#"
+                       role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Store
                     </a>
                     <ul class="dropdown-menu">
-{#                        <li><a class="dropdown-item" href="{% url 'all_products' prod_type='all products' %}">All products</a></li>#}
-                        <li><a class="dropdown-item" href="{% url 'all_products' prod_type='T-Shirt' %}">T-Shirts</a></li>
-                        <li><a class="dropdown-item" href="{% url 'all_products' prod_type='Shirt' %}">Shorts</a></li>
-                        <li><a class="dropdown-item" href="{% url 'all_products' prod_type='Rackets' %}">Rackets</a></li>
-                        <li><a class="dropdown-item" href="{% url 'all_products' prod_type='Headbands' %} ">Headbands</a></li>
+                        <li><a class="dropdown-item" href="#">Clothes</a>
+                            <ul class="dropdown-submenu">
+                                <li><a class="dropdown-item" href="{% url 'all_products' gender='F'%}">Women</a>
+                                    <ul class="dropdown-submenu">
+                                        <li><a class="dropdown-item" href="{% url 'filtered_products' gender='F' prod_type='T-Shirt' %}">T-Shirts</a>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                               href="{% url 'filtered_products' gender='F' prod_type='Shorts' %}">Shorts</a></li>
+                                        <li><a class="dropdown-item"
+                                               href="{% url 'filtered_products' gender='F' prod_type='Skirts' %}">Skirts</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'all_products' gender='M'%}">Men</a>
+                                </li>
+                                <ul class="dropdown-submenu">
+                                    <li><a class="dropdown-item"
+                                           href="{% url 'filtered_products' gender='M' prod_type='T-Shirt' %}">T-Shirts</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'filtered_products' gender='M' prod_type='Shorts' %}">Shorts</a>
+                                    </li>
+                                </ul>
+                        <li><a class="dropdown-item" href="#">Accessories</a>
+                            <ul class="dropdown-submenu">
+                                <li><a class="dropdown-item" href="{% url 'all_products' prod_type='Rackets' %}">Rackets</a></li>
+                                <li><a class="dropdown-item" href="#">Headbands</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -39,5 +62,6 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
+    </div>
     </div>
 </nav>

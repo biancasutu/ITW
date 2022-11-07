@@ -1,14 +1,19 @@
 from django.db import models
 
 
-class Store(models.Model):
+class StoreClothes(models.Model):
     name_of_product = models.CharField(max_length=30)
     price = models.IntegerField()
     description_of_product = models.CharField(max_length=100)
     size = models.CharField(max_length=2)
     number_of_products = models.IntegerField()
     prod_type = models.CharField(max_length=30, default='T-Shirt')
-    genre = models.CharField(max_length=1, default='M')
+    gender = models.CharField(max_length=1, default='M')
 
 
-
+class StoreAccessories(models.Model):
+    name_of_product = models.CharField(max_length=30)
+    price = models.IntegerField()
+    description_of_product = models.CharField(max_length=100)
+    number_of_products = models.IntegerField()
+    prod_type = models.CharField(max_length=30, default='Rackets')
