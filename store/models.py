@@ -1,19 +1,33 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
-class StoreClothes(models.Model):
+class Product(models.Model):
     name_of_product = models.CharField(max_length=30)
     price = models.IntegerField()
     description_of_product = models.CharField(max_length=100)
-    size = models.CharField(max_length=2)
     number_of_products = models.IntegerField()
-    prod_type = models.CharField(max_length=30, default='T-Shirt')
+
+    @property
+    def availability_status(self):
+        if self.number_of_products > 0:
+            return 'On Stock'
+        return "Out fo Stock"
+
+    # availability_status = property(__product_number)
+
+
+class StoreClothes(Product):
+    size = models.CharField(max_length=2)
+    prod_type = models.CharField(max_length=40, default='T-Shirt')
     gender = models.CharField(max_length=1, default='M')
 
 
-class StoreAccessories(models.Model):
-    name_of_product = models.CharField(max_length=30)
-    price = models.IntegerField()
-    description_of_product = models.CharField(max_length=100)
-    number_of_products = models.IntegerField()
-    prod_type = models.CharField(max_length=30, default='Rackets')
+class StoreAccessories(Product):
+    prod_type = models.CharField(max_length=40, default='Rackets')
+
+
+class Cart(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name_of_product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    number_of_products_added = models.IntegerField()

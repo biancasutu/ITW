@@ -7,17 +7,19 @@
         <div class="card-body">
             <h5 class="card-title">Product name: {{ access.name_of_product }}</h5>
             <p class="card-text">Product size: {{ access.price}}</p>
-             <p class="card-text">Product Type: {{ access.prod_type }}</p>
-            <a href="#" class="btn btn-primary">ADD</a>
+            <p class="card-text">Product Type: {{ access.prod_type }}</p>
+            <p class="card-text">Availability: {{ product.availability_status }}</p>
+            <p class="card-text">Product size: {{ access.description_of_product}}</p>
+            <a href="#" class="btn btn-primary">Add to cart</a>
         </div>
     </div>
     <tr>
     <th scope="row">1</th>
     <td>{{ access.name_of_product }}</td>
     <td>{{ access.price }}</td>
-    <td>{{ access.description_of_product }}</td>
-    <td>{{ access.number_of_products }}</td>
+    <td>{{ product.availability_status }}</td>
     <td>{{ access.prod_type }}</td>
+    <td>{{ access.description_of_product }}</td>
     {% endfor %}
 {% endblock %}
 

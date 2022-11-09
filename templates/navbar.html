@@ -28,7 +28,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Clothes</a>
                             <ul class="dropdown-submenu">
-                                <li><a class="dropdown-item" href="{% url 'all_products' gender='F'%}">Women</a>
+                                <li><a class="dropdown-item" href="{% url 'clothes' gender='F'%}">Women</a>
                                     <ul class="dropdown-submenu">
                                         <li><a class="dropdown-item" href="{% url 'filtered_products' gender='F' prod_type='T-Shirt' %}">T-Shirts</a>
                                         </li>
@@ -38,7 +38,7 @@
                                                href="{% url 'filtered_products' gender='F' prod_type='Skirts' %}">Skirts</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="{% url 'all_products' gender='M'%}">Men</a>
+                                <li><a class="dropdown-item" href="{% url 'clothes' gender='M'%}">Men</a>
                                 </li>
                                 <ul class="dropdown-submenu">
                                     <li><a class="dropdown-item"
@@ -48,7 +48,7 @@
                                 </ul>
                                 <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='all' %}">Accessories</a>
                             <ul class="dropdown-submenu">
-                               <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='Rackets' %}">Rackets</a></li>
+                               <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='Rayckets' %}">Rackets</a></li>
                                 <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='Headbands' %}">Headbands</a></li>
                             </ul>
                                 </li>
