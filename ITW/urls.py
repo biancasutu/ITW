@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 from players import urls
+from userextend import views
+from userextend.forms import AuthenticationNewForm, PasswordResetNewForm, SetPasswordNewForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,13 @@ urlpatterns = [
     path('players/', include('players.urls')),  # include numele aplicatiei + python file (in acest caz este urls),
     path('store/', include('store.urls')), # include numele aplicatiei + python file (in acest caz este urls)
     path('accessories/', include('store.accessories_url')), # include numele aplicatiei + python file (in acest caz este urls)
+    path("login/", views.LoginView.as_view(form_class=AuthenticationNewForm), name="login"),
+    path("password_reset/", views.PasswordResetView.as_view(form_class=PasswordResetNewForm), name="password_reset"),
+    path(
+        "reset/<uidb64>/<token>/",
+        views.PasswordResetConfirmView.as_view(form_class=SetPasswordNewForm),
+        name="password_reset_confirm"
+    ),
+    path('', include('django.contrib.auth.urls')),
+    path('', include('userextend.urls'))
 ]
