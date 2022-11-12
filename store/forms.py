@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import TextInput
+from django.forms import TextInput, Textarea
 
 from store.models import StoreClothes, StoreAccessories
 
@@ -36,6 +36,6 @@ class AccessoriesForm(forms.ModelForm):
         widgets = {
             'name_of_product': TextInput(attrs={'placeholder': 'Product name', 'class': 'form-control'}),
             'price': TextInput(attrs={'placeholder': 'Specify price for product', 'class': 'form-control'}),
-            'description_of_product': TextInput(attrs={'placeholder': 'Add some description of the product', 'class': 'form=control'}),
+            'description_of_product': Textarea(attrs={'placeholder': 'Add some description of the product', 'class': 'form=control'}),
             'prod_type': TextInput(attrs={'placeholder': 'Specify type of product (ex: T-Shirt)', 'class': 'form-control'})
         }

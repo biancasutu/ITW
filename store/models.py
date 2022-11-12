@@ -26,8 +26,3 @@ class StoreClothes(Product):
 class StoreAccessories(Product):
     prod_type = models.CharField(max_length=40, default='Rackets')
 
-
-class Cart(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name_of_product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    number_of_products_added = models.IntegerField()

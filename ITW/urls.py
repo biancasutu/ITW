@@ -24,8 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('players/', include('players.urls')),  # include numele aplicatiei + python file (in acest caz este urls),
-    path('store/', include('store.urls')), # include numele aplicatiei + python file (in acest caz este urls)
-    path('accessories/', include('store.accessories_url')), # include numele aplicatiei + python file (in acest caz este urls)
+    path('store/', include('store.urls')),
+    path('accessories/', include('store.accessories_url')),
     path("login/", views.LoginView.as_view(form_class=AuthenticationNewForm), name="login"),
     path("password_reset/", views.PasswordResetView.as_view(form_class=PasswordResetNewForm), name="password_reset"),
     path(
@@ -34,5 +34,6 @@ urlpatterns = [
         name="password_reset_confirm"
     ),
     path('', include('django.contrib.auth.urls')),
-    path('', include('userextend.urls'))
+    path('', include('userextend.urls')),
+    path('cart/', include('cart.urls'))
 ]

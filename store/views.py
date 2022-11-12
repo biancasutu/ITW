@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.sites import requests
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -10,18 +11,20 @@ from .forms import ClothesForm, AccessoriesForm
 from .models import StoreClothes, StoreAccessories
 
 
-class ClothesCreateView(CreateView):
+class ClothesCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     template_name = 'store/create_clothes.html'
     model = StoreClothes
     fields = ['name_of_product', 'price', 'description_of_product',
               'size', 'prod_type', 'gender']
     success_url = reverse_lazy('create_clothes')
+    permission_required = 'clothes.add_clothes'
 
 
-class StoreClothesListView(ListView):
+class StoreClothesListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     template_name = 'store/clothes.html'
     model = StoreClothes
     context_object_name = 'clothes'
+    permission_required = 'clothes.clothes_list'
 
     def get(self, request, *args, **kwargs):
         if not self.kwargs.get('prod_type'):
@@ -75,5 +78,6 @@ def get_filtered(request, acc_name):
     context = StoreAccessories.objects.all()
 
     return render(request, 'store/accessories.html', {'all_accessories': context})
+
 
 
