@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} Clothes {% endblock %}
 {% block content %}
-    {% for product in all_products %}
+    {% for product in clothes %}
          <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -21,23 +21,5 @@
     <td>{{ product.availability_status }}</td>
     <td>{{ product.prod_type }}</td>
     <td>{{ product.description_of_product }}</td>
-    {% endfor %}
-    {% for access in all_accessories %}
-         <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Product name: {{ access.name_of_product }}</h5>
-            <p class="card-text">Product size: {{ access.price}}</p>
-            <p class="card-text">Product Type: {{ access.prod_type }}</p>
-            <a href="#" class="btn btn-primary">ADD</a>
-        </div>
-    </div>
-    <tr>
-    <th scope="row">1</th>
-    <td>{{ access.name_of_product }}</td>
-    <td>{{ access.price }}</td>
-    <td>{{ access.description_of_product }}</td>
-    <td>{{ access.number_of_products }}</td>
-    <td>{{ access.prod_type }}</td>
     {% endfor %}
 {% endblock %}

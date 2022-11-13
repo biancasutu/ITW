@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_uuid_primary_key',
+    'import_export',
     'home',
     'players',
     'store',
@@ -98,7 +99,7 @@ DATABASES = {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'djangodatabase',
 #         'USER': 'root',
-#         'PASSWORD': 'Pufosenia04.',
+#         'PASSWORD': 'Parola.',
 #         'HOST': 'localhost',
 #         'PORT': '3306',
 #     }
@@ -158,6 +159,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # SMTP -> SIMPLE MAIL TRANSFER PROTOCL - UN PROTOCOL FOLOSIT PENTRU TRIMITEREA DE MAILURI
 
+
+# trimite mail cu datele de logare, mailul predefinit cand faci cont, change pwd etc
 EMAIL_HOST = 'mail.horiascurtu.ro'
 EMAIL_HOST_USER = 'thebestgroupro29@horiascurtu.ro'
 EMAIL_HOST_PASSWORD = 'Django1234!'

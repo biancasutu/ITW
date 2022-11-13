@@ -11,63 +11,69 @@ from .forms import ClothesForm, AccessoriesForm
 from .models import StoreClothes, StoreAccessories
 
 
-class ClothesCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
+class ClothesCreateView(CreateView):
     template_name = 'store/create_clothes.html'
     model = StoreClothes
-    fields = ['name_of_product', 'price', 'description_of_product',
-              'size', 'prod_type', 'gender']
+    form_class = ClothesForm
     success_url = reverse_lazy('create_clothes')
-    permission_required = 'clothes.add_clothes'
+    # permission_required = 'store.add_storeclothes'
 
 
-class StoreClothesListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
+class StoreClothesListView(ListView):
     template_name = 'store/clothes.html'
     model = StoreClothes
     context_object_name = 'clothes'
-    permission_required = 'clothes.clothes_list'
 
     def get(self, request, *args, **kwargs):
-        if not self.kwargs.get('prod_type'):
-            context = StoreClothes.objects.filter(gender=self.kwargs['gender'])
+        if self.kwargs:
+            if not self.kwargs.get('prod_type'):
+                context = StoreClothes.objects.filter(gender=self.kwargs['gender'])
+                return render(request, 'store/clothes.html', {'clothes': context})
+
+            context = StoreClothes.objects.filter(gender=self.kwargs['gender'], prod_type=self.kwargs['prod_type'])
             return render(request, 'store/clothes.html', {'clothes': context})
+            # daca cheia prod_type contine substringul 'all' (din urls) se executa select all (daca se intra in if)
 
-        context = StoreClothes.objects.filter(gender=self.kwargs['gender'], prod_type=self.kwargs['prod_type'])
-        # daca cheia prod_type contine substringul 'all' (din urls) se executa select all (daca se intra in if)
-
+        context = StoreClothes.objects.all()
         return render(request, 'store/clothes.html', {'clothes': context})
 
 
-class ClothesUpdateView(UpdateView):
+class ClothesUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     template_name = 'store/update_clothes.html'
     model = StoreClothes
     form_class = ClothesForm
     success_url = reverse_lazy('clothes')
+    permission_required = 'store.change_storeclothes'
 
 
-class ClothesDeleteView(DeleteView):
+class ClothesDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'store/delete_clothes.html'
     model = StoreClothes
     success_url = reverse_lazy('clothes')
+    permission_required = 'store.delete_storeclothes'
 
 
-class AccessoriesCreateView(CreateView):
+class AccessoriesCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     template_name = 'store/create_accessories.html'
     model = StoreAccessories
     form_class = AccessoriesForm
     success_url = reverse_lazy('accessories_by_name')
+    permission_required = 'store.create_storeaccessories'
 
 
-class AccessoriesUpdateView(UpdateView):
+class AccessoriesUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     template_name = 'store/update_accessories.html'
     model = StoreAccessories
     form_class = AccessoriesForm
     success_url = reverse_lazy('accesories_by_name')
+    permission_required = 'store.change_storeaccessories'
 
 
-class AccessoriesDeleteView(DeleteView):
+class AccessoriesDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'store/delete_accessories.html'
     model = StoreAccessories
     success_url = reverse_lazy('accessories_by_name')
+    permission_required = 'store.delete_storeaccessories'
 
 
 def get_filtered(request, acc_name):
@@ -80,4 +86,15 @@ def get_filtered(request, acc_name):
     return render(request, 'store/accessories.html', {'all_accessories': context})
 
 
+# class AllProductsView(View):
+#     template_name = 'store/all_products.html'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['clothes'] = StoreClothes.objects.all()
+#         context['accessories'] = StoreAccessories.objects.all()
 
+def get_all_products(request):
+    clothes = StoreClothes.objects.all()
+    accessories = StoreAccessories.objects.all()
+    return render(request, 'store/all_products.html', {'clothes': clothes, 'accessories': accessories})

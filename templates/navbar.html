@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg " style="background-color: transparent">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">ITW</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -20,45 +20,72 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#"
+                    <a class="nav-link dropdown-toggle"
                        role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Store
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Clothes</a>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'all_products' %}">All Products</a>
+                        <li><a class="dropdown-item" href="">Clothes</a>
                             <ul class="dropdown-submenu">
-                                <li><a class="dropdown-item" href="{% url 'clothes' gender='F'%}">Women</a>
+                                <li><a class="dropdown-item" href="{% url 'clothes' gender='F' %}">Women</a>
                                     <ul class="dropdown-submenu">
-                                        <li><a class="dropdown-item" href="{% url 'filtered_products' gender='F' prod_type='T-Shirt' %}">T-Shirts</a>
+                                        <li><a class="dropdown-item"
+                                               href="{% url 'filtered_products' gender='F' prod_type='T-Shirt' %}">T-Shirts</a>
                                         </li>
                                         <li><a class="dropdown-item"
-                                               href="{% url 'filtered_products' gender='F' prod_type='Shorts' %}">Shorts</a></li>
+                                               href="{% url 'filtered_products' gender='F' prod_type='Shorts' %}">Shorts</a>
+                                        </li>
                                         <li><a class="dropdown-item"
-                                               href="{% url 'filtered_products' gender='F' prod_type='Skirts' %}">Skirts</a></li>
+                                               href="{% url 'filtered_products' gender='F' prod_type='Skirts' %}">Skirts</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="{% url 'clothes' gender='M'%}">Men</a>
+                                <li><a class="dropdown-item" href="{% url 'clothes' gender='M' %}">Men</a>
                                 </li>
                                 <ul class="dropdown-submenu">
                                     <li><a class="dropdown-item"
-                                           href="{% url 'filtered_products' gender='M' prod_type='T-Shirt' %}">T-Shirts</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'filtered_products' gender='M' prod_type='Shorts' %}">Shorts</a>
+                                           href="{% url 'filtered_products' gender='M' prod_type='T-Shirt' %}">T-Shirts</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                           href="{% url 'filtered_products' gender='M' prod_type='Shorts' %}">Shorts</a>
                                     </li>
                                 </ul>
-                                <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='all' %}">Accessories</a>
-                            <ul class="dropdown-submenu">
-                               <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='Rayckets' %}">Rackets</a></li>
-                                <li><a class="dropdown-item" href="{% url 'accessories_by_name' acc_name='Headbands' %}">Headbands</a></li>
                             </ul>
+                        <li><a class="dropdown-item"
+                               href="{% url 'accessories_by_name' acc_name='all' %}">Accessories</a>
+                            <ul class="dropdown-submenu">
+                                <li><a class="dropdown-item"
+                                       href="{% url 'accessories_by_name' acc_name='Rayckets' %}">Rackets</a>
                                 </li>
-                    </ul>
-                </li>
+                                <li><a class="dropdown-item"
+                                       href="{% url 'accessories_by_name' acc_name='Headbands' %}">Headbands</a>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
                     </ul>
             </ul>
+
+            {#            Shopping Cart#}
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-warning "
+                        aria-expanded="false">
+                    Cart
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'show_cart' %}">Cart</a></li>
+                </ul>
+            </div>
+
+            {#        Login and auth#}
+
             {% if request.user.is_authenticated %}
                 <div class="btn-group">
-                    <button type="button" class="btn btn-outline-info dropdown-toggle" data-bs-toggle="dropdown"
+                    <button type="button" class="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
                         My profile, {{ request.user.username }}
                     </button>
@@ -71,10 +98,13 @@
                 <a href="{% url 'login' %}" class="btn btn-outline-success me-2">Login</a>
                 <a href="{% url 'sign_up' %}" class="btn btn-outline-secondary">Sign up</a>
             {% endif %}
-{#            <form class="d-flex" role="search">#}
-{#                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
-{#                <button class="btn btn-outline-success" type="submit">Search</button>#}
-{#            </form>#}
+            {#            <a href="{% url 'create_clothes' %}" class="btn btn-outline-success me-2">Add clothes product</a>#}
+
+
+            {#            <form class="d-flex" role="search">#}
+            {#                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+            {#                <button class="btn btn-outline-success" type="submit">Search</button>#}
+            {#            </form>#}
         </div>
     </div>
 </nav>

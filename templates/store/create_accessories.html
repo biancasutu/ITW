@@ -1,135 +1,41 @@
 {% extends 'base.html' %}
-{% block title %} Add new accessories product on website {% endblock %}
+{% block title %} Add new accessories products on website {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-            <br>
-        <div class="card">
-            <div class="card-header">
-                <h3 class="text-center">Add new accesories product</h3>
-            </div>
-            <form method="post">
-                {% csrf_token %}  {# Cross site request forgery protection #}
-               <div class="card-body">
-                   {{ form.as_p }}  # genereaza field urile in functie de ce avem in model
-               </div>
-                <div class="card-footer text-center">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-            </form>
+{% for product in accessories %}
+         <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
+            <p class="card-text">Product Type: {{ product.prod_type }}</p>
+            <p class="card-text">Availability: {{ product.availability_status }}</p>
+            <p class="card-text">Description: {{ access.description_of_product}}</p>
+            <a href="#" class="btn btn-primary">Add to cart</a>
         </div>
-        </div>
-           <div class="col-md-8">
-                <br><br>
-                {% if all_students %}
-                    <table class="table table-striped table-success">
-                        <thead>
-                        <tr>
-                            <th>Product name</th>
-                            <th>Price</th>
-                            <th>Description</th>
-                            {% if number_of_products <= 5 and number_of_products > 0%}
-                                <th>Number of products</th>
-                            {% else %}
-                                <th>availability_status</th>
-                            {% endif %}
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {% for product in all_students %}
-                            <tr>
-                                <td>{{ student.first_name }} {{ student.last_name }}</td>
-                                <td>{{ student.age }}</td>
-                                <td>
-                                    {% if student.is_olympic is True %}
-                                        Yes
-                                    {% elif student.is_olympic is False %}
-                                        No
-                                    {% endif %}
-                                </td>
-                                <td>{{ student.start_date|date:"d/m/Y" }}</td>
-                                <td>{{ student.end_date|date:"d/m/Y" }}</td>
-                                <td>{{ student.email }}</td>
-                                <td>
-                                    {% if student.trainer %}
-                                        {{ student.trainer.first_name }} {{ student.trainer.last_name }}
-                                    {% else %}
-                                        No trainer
-                                    {% endif %}
-                                </td>
-                                <td>
-                                    {% if student.trainer.course %}
-                                        {{ student.trainer.course }}
-                                    {% else %}
-                                        No course
-                                    {% endif %}
-                                </td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="btn btn-light dropdown-toggle" type="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                            Actions
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            {% if perms.student.change_student %}
-                                                <li><a class="dropdown-item"
-                                                       href="{% url 'update-student' student.id %}">Update</a></li>
-                                            {% endif %}
-                                            {% if perms.student.delete_student %}
-                                                <li><a class="dropdown-item"
-                                                       href="{% url 'delete-student' student.id %}">Delete</a></li>
-                                            {% endif %}
-                                            {% if perms.student.delete_by_modal %}
-                                                <li>
-                                                    <button type="button" class="dropdown-item" data-bs-toggle="modal"
-                                                            data-bs-target="#student_{{ student.id }}">
-                                                        Delete-modal
-                                                    </button>
-                                                </li>
-                                            {% endif %}
-                                            {% if perms.student.view_student %}
-                                            <li><a class="dropdown-item" href="{% url 'details-student' student.id %}">View
-                                                details</a></li>
-                                            {% endif %}
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            {% if perms.student.delete_by_modal %}
-                                <div class="modal fade" id="student_{{ student.id }}" tabindex="-1"
-                                     aria-labelledby="exampleModalLabel"
-                                     aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Delete
-                                                    - {{ student.first_name }} {{ student.last_name }}</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Are you sure to delete {{ student.first_name }} {{ student.last_name }}?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                    No
-                                                </button>
-                                                <a href="{% url 'delete-student-modal' student.id %}"
-                                                   class="btn btn-danger">Yes</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                        </tbody>
-                    </table>
-                {% else %}
-                    <h3 class="text-center"> Nothing was found</h3>
-                {% endif %}
-            </div>
     </div>
-</div>
+    <tr>
+    <th scope="row">1</th>
+    <td>{{ product.name_of_product }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.availability_status }}</td>
+    <td>{{ product.prod_type }}</td>
+    <td>{{ product.description_of_product }}</td>
+    {% endfor %}
+    {% for accessory in all_accessories %}
+         <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Product name: {{ accessory.name_of_product }}</h5>
+            <p class="card-text">Product Type: {{ accessory.prod_type }}</p>
+            <a href="#" class="btn btn-primary">ADD</a>
+        </div>
+    </div>
+    <tr>
+    <th scope="row">1</th>
+    <td>{{ accessory.name_of_product }}</td>
+    <td>{{ accessory.price }}</td>
+    <td>{{ accessory.description_of_product }}</td>
+    <td>{{ accessory.number_of_products }}</td>
+    <td>{{ accessory.prod_type }}</td>
+    {% endfor %}
 {% endblock %}

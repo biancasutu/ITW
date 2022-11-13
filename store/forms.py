@@ -9,7 +9,7 @@ class ClothesForm(forms.ModelForm):
         model = StoreClothes
         # fields = '__all__' # toate fieldurile, ordinea va fi cea din models.py
         fields = ['name_of_product', 'price', 'description_of_product',
-                  'size', 'prod_type', 'gender']
+                  'size', 'prod_type', 'gender', 'number_of_products']
 
         widgets = {
             'name_of_product': TextInput(attrs={'placeholder': 'Product name', 'class': 'form-control'}),
@@ -18,6 +18,7 @@ class ClothesForm(forms.ModelForm):
             'size': TextInput(attrs={'placeholder': 'Specify size', 'class': 'form-control'}),
             'prod_type': TextInput(attrs={'placeholder': 'Specify type of product (ex: T-Shirt)', 'class': 'form-control'}),
             'gender': TextInput(attrs={'placeholder': 'Specify gender', 'class': 'form-control'}),
+            'number_of_products': TextInput(attrs={'placeholder': 'Specify number of products', 'class': 'form-control'}),
         }
 
         def clean(self):
