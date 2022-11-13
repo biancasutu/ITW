@@ -1,81 +1,37 @@
 {% extends 'base.html' %}
 {% block title %} Clothes {% endblock %}
 {% block content %}
-    {% for product in clothes %}
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
-                <p class="card-text">Product size: {{ product.size }}</p>
-                <p class="card-text">Product Type: {{ product.prod_type }}</p>
-                <p class="card-text">Availability: {{ product.availability_status }}</p>
-                <p class="card-text">Description {{ access.description_of_product }}</p>
-                <a href="#" class="btn btn-primary">Add to cart</a>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for product in clothes %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
+                        <p class="card-text">Product size: {{ product.size }}</p>
+                        <p class="card-text">Product Type: {{ product.prod_type }}</p>
+                        <p class="card-text">Availability: {{ product.availability_status }}</p>
+                        <p class="card-text">Description {{ product.description_of_product }}</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <tr>
-        <th scope="row">1</th>
-        <td>{{ product.name_of_product }}</td>
-        <td>{{ product.price }}</td>
-        <td>{{ product.size }}</td>
-        <td>{{ product.availability_status }}</td>
-        <td>{{ product.prod_type }}</td>
-        <td>{{ product.description_of_product }}</td>
-    {% endfor %}
-{% for accessories in all_accessories %}
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Product name: {{ access.name_of_product }}</h5>
-            <p class="card-text">Product size: {{ access.price }}</p>
-            <p class="card-text">Product Type: {{ access.prod_type }}</p>
-            <a href="#" class="btn btn-primary">ADD</a>
-        </div>
+        {% endfor %}
     </div>
-    <tr>
-    <th scope="row">1</th>
-    <td>{{ accessories.name_of_product }}</td>
-    <td>{{ access.price }}</td>
-    <td>{{ access.description_of_product }}</td>
-    <td>{{ access.number_of_products }}</td>
-    <td>{{ access.prod_type }}</td>
-{% endfor %}
-
-<h1>Accessories</h1>
-{% for product in accessories %}
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
-            <p class="card-text">Product Type: {{ product.prod_type }}</p>
-            <p class="card-text">Availability: {{ product.availability_status }}</p>
-            <p class="card-text">Description: {{ access.description_of_product }}</p>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-        </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for accessory in all_accessories %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ accessories.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Product name: {{ accessory.name_of_product }}</h5>
+                        <p class="card-text">Product size: {{ accessory.price }}</p>
+                        <p class="card-text">Product Type: {{ accessory.prod_type }}</p>
+                        <p class="card-text">Product Type: {{ accessory.description }}</p>
+                        <a href="#" class="btn btn-primary">ADD</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    <tr>
-    <th scope="row">1</th>
-    <td>{{ product.name_of_product }}</td>
-    <td>{{ product.price }}</td>
-    <td>{{ product.availability_status }}</td>
-    <td>{{ product.prod_type }}</td>
-    <td>{{ product.description_of_product }}</td>
-{% endfor %}
-{% for accessory in all_accessories %}
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Product name: {{ accessory.name_of_product }}</h5>
-            <p class="card-text">Product Type: {{ accessory.prod_type }}</p>
-            <a href="#" class="btn btn-primary">ADD</a>
-        </div>
-    </div>
-    <tr>
-    <th scope="row">1</th>
-    <td>{{ accessory.name_of_product }}</td>
-    <td>{{ accessory.price }}</td>
-    <td>{{ accessory.description_of_product }}</td>
-    <td>{{ accessory.number_of_products }}</td>
-    <td>{{ accessory.prod_type }}</td>
-{% endfor %}
 {% endblock %}

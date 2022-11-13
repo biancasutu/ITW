@@ -33,7 +33,6 @@ class StoreClothesListView(ListView):
             context = StoreClothes.objects.filter(gender=self.kwargs['gender'], prod_type=self.kwargs['prod_type'])
             return render(request, 'store/clothes.html', {'clothes': context})
             # daca cheia prod_type contine substringul 'all' (din urls) se executa select all (daca se intra in if)
-
         context = StoreClothes.objects.all()
         return render(request, 'store/clothes.html', {'clothes': context})
 

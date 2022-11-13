@@ -28,7 +28,7 @@
                     <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item" href="{% url 'all_products' %}">All Products</a>
-                        <li><a class="dropdown-item" href="">Clothes</a>
+                        <li><a class="dropdown-item" href="{% url 'all_gender_clothes' %}">Clothes</a>
                             <ul class="dropdown-submenu">
                                 <li><a class="dropdown-item" href="{% url 'clothes' gender='F' %}">Women</a>
                                     <ul class="dropdown-submenu">
@@ -98,7 +98,7 @@
                 <a href="{% url 'login' %}" class="btn btn-outline-success me-2">Login</a>
                 <a href="{% url 'sign_up' %}" class="btn btn-outline-secondary">Sign up</a>
             {% endif %}
-            {#            <a href="{% url 'create_clothes' %}" class="btn btn-outline-success me-2">Add clothes product</a>#}
+{#                        <a href="{% url 'create_clothes' %}" class="btn btn-outline-success me-2">Add clothes product</a>#}
 
 
             {#            <form class="d-flex" role="search">#}

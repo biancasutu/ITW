@@ -7,6 +7,8 @@ class Product(models.Model):
     price = models.IntegerField()
     description_of_product = models.CharField(max_length=100)
     number_of_products = models.IntegerField()
+    image = models.ImageField(default='img_not_found.png')  # pip install Pillow (library pt procesare imagini in python)
+
 
     @property
     def availability_status(self):

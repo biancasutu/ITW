@@ -3,23 +3,23 @@
 {% block content %}
     {% for access in all_accessories %}
          <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{{ accessories.image.url }}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Product name: {{ access.name_of_product }}</h5>
-            <p class="card-text">Product size: {{ access.price}}</p>
-            <p class="card-text">Product Type: {{ access.prod_type }}</p>
-            <p class="card-text">Availability: {{ product.availability_status }}</p>
-            <p class="card-text">Product size: {{ access.description_of_product}}</p>
+            <h5 class="card-title">Product name: {{ accessories.name_of_product }}</h5>
+            <p class="card-text">Product size: {{ accessories.price}}</p>
+            <p class="card-text">Product Type: {{ accessories.prod_type }}</p>
+            <p class="card-text">Availability: {{ accessories.availability_status }}</p>
+            <p class="card-text">Product size: {{ accessories.description_of_product}}</p>
             <a href="#" class="btn btn-primary">Add to cart</a>
         </div>
     </div>
     <tr>
     <th scope="row">1</th>
-    <td>{{ access.name_of_product }}</td>
-    <td>{{ access.price }}</td>
-    <td>{{ product.availability_status }}</td>
-    <td>{{ access.prod_type }}</td>
-    <td>{{ access.description_of_product }}</td>
+    <td>{{ accessories.name_of_product }}</td>
+    <td>{{ accessories.price }}</td>
+    <td>{{ productories.availability_status }}</td>
+    <td>{{ accessories.prod_type }}</td>
+    <td>{{ accessories.description_of_product }}</td>
     {% endfor %}
 {% endblock %}
 

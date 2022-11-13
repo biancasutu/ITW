@@ -2,40 +2,25 @@
 {% block title %} Add new accessories products on website {% endblock %}
 
 {% block content %}
-{% for product in accessories %}
-         <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
-            <p class="card-text">Product Type: {{ product.prod_type }}</p>
-            <p class="card-text">Availability: {{ product.availability_status }}</p>
-            <p class="card-text">Description: {{ access.description_of_product}}</p>
-            <a href="#" class="btn btn-primary">Add to cart</a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <br>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Create Accessory item</h3>
+            </div>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+               <div class="card-body">
+                   {{ form.as_p }}
+               </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
         </div>
     </div>
-    <tr>
-    <th scope="row">1</th>
-    <td>{{ product.name_of_product }}</td>
-    <td>{{ product.price }}</td>
-    <td>{{ product.availability_status }}</td>
-    <td>{{ product.prod_type }}</td>
-    <td>{{ product.description_of_product }}</td>
-    {% endfor %}
-    {% for accessory in all_accessories %}
-         <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Product name: {{ accessory.name_of_product }}</h5>
-            <p class="card-text">Product Type: {{ accessory.prod_type }}</p>
-            <a href="#" class="btn btn-primary">ADD</a>
-        </div>
-    </div>
-    <tr>
-    <th scope="row">1</th>
-    <td>{{ accessory.name_of_product }}</td>
-    <td>{{ accessory.price }}</td>
-    <td>{{ accessory.description_of_product }}</td>
-    <td>{{ accessory.number_of_products }}</td>
-    <td>{{ accessory.prod_type }}</td>
-    {% endfor %}
+</div>
 {% endblock %}
