@@ -36,10 +36,10 @@
                                                href="{% url 'filtered_products' gender='F' prod_type='T-Shirt' %}">T-Shirts</a>
                                         </li>
                                         <li><a class="dropdown-item"
-                                               href="{% url 'filtered_products' gender='F' prod_type='Shorts' %}">Shorts</a>
+                                               href="{% url 'filtered_products' gender='F' prod_type='Short' %}">Shorts</a>
                                         </li>
                                         <li><a class="dropdown-item"
-                                               href="{% url 'filtered_products' gender='F' prod_type='Skirts' %}">Skirts</a>
+                                               href="{% url 'filtered_products' gender='F' prod_type='Skirt' %}">Skirts</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -50,7 +50,7 @@
                                            href="{% url 'filtered_products' gender='M' prod_type='T-Shirt' %}">T-Shirts</a>
                                     </li>
                                     <li><a class="dropdown-item"
-                                           href="{% url 'filtered_products' gender='M' prod_type='Shorts' %}">Shorts</a>
+                                           href="{% url 'filtered_products' gender='M' prod_type='Short' %}">Shorts</a>
                                     </li>
                                 </ul>
                             </ul>
@@ -58,10 +58,10 @@
                                href="{% url 'accessories_by_name' acc_name='all' %}">Accessories</a>
                             <ul class="dropdown-submenu">
                                 <li><a class="dropdown-item"
-                                       href="{% url 'accessories_by_name' acc_name='Rayckets' %}">Rackets</a>
+                                       href="{% url 'accessories_by_name' acc_name='Raycket' %}">Rackets</a>
                                 </li>
                                 <li><a class="dropdown-item"
-                                       href="{% url 'accessories_by_name' acc_name='Headbands' %}">Headbands</a>
+                                       href="{% url 'accessories_by_name' acc_name='Headband' %}">Headbands</a>
                                 </li>
                             </ul>
                         </li>
@@ -98,7 +98,8 @@
                 <a href="{% url 'login' %}" class="btn btn-outline-success me-2">Login</a>
                 <a href="{% url 'sign_up' %}" class="btn btn-outline-secondary">Sign up</a>
             {% endif %}
-{#                        <a href="{% url 'create_clothes' %}" class="btn btn-outline-success me-2">Add clothes product</a>#}
+{#            <a href="{% url 'create_clothes' %}" class="btn btn-outline-success me-2">Add clothes product</a>#}
+            <a href="{% url 'create_accessories' %}" class="btn btn-outline-success me-2">Add accesory product</a>
 
 
             {#            <form class="d-flex" role="search">#}

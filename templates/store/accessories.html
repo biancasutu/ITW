@@ -1,30 +1,30 @@
 {% extends 'base.html' %}
 {% block title %} Players {% endblock %}
 {% block content %}
-    {% for access in all_accessories %}
+    {% for accessory in accessories %}
          <div class="card" style="width: 18rem;">
-        <img src="{{ accessories.image.url }}" class="card-img-top" alt="...">
+        <img src="{{ accessory.image.url }}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Product name: {{ accessories.name_of_product }}</h5>
-            <p class="card-text">Product size: {{ accessories.price}}</p>
-            <p class="card-text">Product Type: {{ accessories.prod_type }}</p>
-            <p class="card-text">Availability: {{ accessories.availability_status }}</p>
-            <p class="card-text">Product size: {{ accessories.description_of_product}}</p>
+            <h5 class="card-title">Product name: {{ accessory.name_of_product }}</h5>
+            <p class="card-text">Price: {{ accessory.price}}</p>
+            <p class="card-text">Type: {{ accessory.prod_type }}</p>
+            <p class="card-text">Availability: {{ accessory.availability_status }}</p>
+            <p class="card-text">Description: {{ accessory.description_of_product}}</p>
             <a href="#" class="btn btn-primary">Add to cart</a>
         </div>
     </div>
-    <tr>
-    <th scope="row">1</th>
-    <td>{{ accessories.name_of_product }}</td>
-    <td>{{ accessories.price }}</td>
-    <td>{{ productories.availability_status }}</td>
-    <td>{{ accessories.prod_type }}</td>
-    <td>{{ accessories.description_of_product }}</td>
+{#    <tr>#}
+{#    <th scope="row">1</th>#}
+{#    <td>{{ accessory.name_of_product }}</td>#}
+{#    <td>{{ accessory.price }}</td>#}
+{#    <td>{{ accessory.availability_status }}</td>#}
+{#    <td>{{ accessory.prod_type }}</td>#}
+{#    <td>{{ accessory.description_of_product }}</td>#}
     {% endfor %}
 {% endblock %}
 
-name_of_product = models.CharField(max_length=30)
-    price = models.IntegerField()
-    description_of_product = models.CharField(max_length=100)
-    number_of_products = models.IntegerField()
-    prod_type = models.CharField(max_length=30, default='Rackets')
+{#name_of_product = models.CharField(max_length=30)#}
+{#    price = models.IntegerField()#}
+{#    description_of_product = models.CharField(max_length=100)#}
+{#    number_of_products = models.IntegerField()#}
+{#    prod_type = models.CharField(max_length=30, default='Rackets')#}
