@@ -11,12 +11,12 @@ from .forms import ClothesForm, AccessoriesForm
 from .models import StoreClothes, StoreAccessories
 
 
-class ClothesCreateView(CreateView):
+class ClothesCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     template_name = 'store/create_clothes.html'
     model = StoreClothes
     form_class = ClothesForm
-    success_url = reverse_lazy('create_clothes')
-    # permission_required = 'store.add_storeclothes'
+    success_url = reverse_lazy('clothes')
+    permission_required = 'store.add_storeclothes'
 
 
 class StoreClothesListView(ListView):
@@ -37,12 +37,12 @@ class StoreClothesListView(ListView):
         return render(request, 'store/clothes.html', {'clothes': context})
 
 
-class ClothesUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
+class ClothesUpdateView(UpdateView):
     template_name = 'store/update_clothes.html'
     model = StoreClothes
     form_class = ClothesForm
     success_url = reverse_lazy('clothes')
-    permission_required = 'store.change_storeclothes'
+    # permission_required = 'store.change_storeclothes'
 
 
 class ClothesDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):

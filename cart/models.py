@@ -18,8 +18,11 @@ class Cart(models.Model):
     price = models.IntegerField()
     clothes_size = models.CharField(max_length=2)
     order_id = models.UUIDField(default=uuid.uuid4, primary_key=True)
+    # availability_status = models.ForeignKey(Product, on_delete=models.CASCADE)
     # order_cart = models.ManyToManyField(Orders, on_delete=models.CASCADE)
 
+    def calculate_price(self):
+        self.price *= self.number_of_products_added
 
 
 

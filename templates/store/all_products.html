@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %} Clothes {% endblock %}
+<section class="bg-img-all_products">
 {% block content %}
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for product in clothes %}
@@ -28,10 +29,11 @@
                         <p class="card-text">Price: {{ accessory.price }}</p>
                         <p class="card-text">Type: {{ accessory.prod_type }}</p>
                         <p class="card-text">Description: {{ accessory.description }}</p>
-                        <a href="#" class="btn btn-primary">Add to card</a>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
 {% endblock %}
+</section>

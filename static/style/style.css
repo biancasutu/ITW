@@ -1,13 +1,18 @@
-body, html{
+body, html {
     height: 100%;
 }
 
-body{
-    background-image: url("../images/tennis_img.jpg");
-    height:100%;
-    background-position: center;
-    background-repeat:no-repeat;
+.bg-img-homepage {
+    background: url("/static/images/tennis_img.jpg") no-repeat center center fixed;
     background-size: cover;
-    margin: 0;
+    /*Toate cover-urile de mai jos sunt pentru browsere speciale (IE / Mozilla) unde background image-u'
+    nu e procesat in tocmai la fel mereu fara webkit*/
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+
+.bg-img-all_products {
+    background-image: url("../images/tennis_img2.jpg");
 }
 
