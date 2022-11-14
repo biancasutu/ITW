@@ -15,12 +15,12 @@ class ClothesCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView)
     template_name = 'store/create_clothes.html'
     model = StoreClothes
     form_class = ClothesForm
-    success_url = reverse_lazy('clothes')
+    success_url = reverse_lazy('product_administration')
     permission_required = 'store.add_storeclothes'
 
 
 class StoreClothesListView(ListView):
-    template_name = 'store/clothes.html'
+    template_name = 'store/all_products.html'
     model = StoreClothes
     context_object_name = 'clothes'
 
@@ -37,18 +37,19 @@ class StoreClothesListView(ListView):
         return render(request, 'store/clothes.html', {'clothes': context})
 
 
-class ClothesUpdateView(UpdateView):
+class ClothesUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     template_name = 'store/update_clothes.html'
     model = StoreClothes
     form_class = ClothesForm
-    success_url = reverse_lazy('clothes')
-    # permission_required = 'store.change_storeclothes'
+    success_url = reverse_lazy('product_administration')
+    permission_required = 'store.change_storeclothes'
+
 
 
 class ClothesDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'store/delete_clothes.html'
     model = StoreClothes
-    success_url = reverse_lazy('clothes')
+    success_url = reverse_lazy('product_administration')
     permission_required = 'store.delete_storeclothes'
 
 
@@ -56,7 +57,7 @@ class AccessoriesCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateV
     template_name = 'store/create_accessories.html'
     model = StoreAccessories
     form_class = AccessoriesForm
-    success_url = reverse_lazy('accessories_by_name')
+    success_url = reverse_lazy('product_administration')
     permission_required = 'store.create_storeaccessories'
 
 
@@ -64,14 +65,14 @@ class AccessoriesUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateV
     template_name = 'store/update_accessories.html'
     model = StoreAccessories
     form_class = AccessoriesForm
-    success_url = reverse_lazy('accesories_by_name')
+    success_url = reverse_lazy('product_administration')
     permission_required = 'store.change_storeaccessories'
 
 
 class AccessoriesDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'store/delete_accessories.html'
     model = StoreAccessories
-    success_url = reverse_lazy('accessories_by_name')
+    success_url = reverse_lazy('product_administration')
     permission_required = 'store.delete_storeaccessories'
 
 
@@ -85,15 +86,15 @@ def get_filtered(request, acc_name):
     return render(request, 'store/accessories.html', {'all_accessories': context})
 
 
-# class AllProductsView(View):
-#     template_name = 'store/all_products.html'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['clothes'] = StoreClothes.objects.all()
-#         context['accessories'] = StoreAccessories.objects.all()
 
 def get_all_products(request):
     clothes = StoreClothes.objects.all()
     accessories = StoreAccessories.objects.all()
     return render(request, 'store/all_products.html', {'clothes': clothes, 'accessories': accessories})
+
+
+def get_all_products_administration(request):
+    clothes = StoreClothes.objects.all()
+    accessories = StoreAccessories.objects.all()
+    return render(request, 'store/products_administration.html', {'clothes': clothes, 'accessories': accessories})
+

@@ -24,7 +24,14 @@ class StoreClothes(Product):
     prod_type = models.CharField(max_length=40, default='T-Shirt')
     gender = models.CharField(max_length=1, default='M')
 
+    def __str__(self):
+        return self.name_of_product
+
+
 
 class StoreAccessories(Product):
     prod_type = models.CharField(max_length=40, default='Rackets')
+
+    def __str__(self):
+        return self.name_of_product
 

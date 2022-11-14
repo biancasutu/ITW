@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %} Clothes {% endblock %}
+<section class="bg-img-all_products">
+    {% block content %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product name</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Description</th>
+                    <th>#</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for product in clothes %}
+                    <tr>
+                        <td><img style="height: 50px;width: 50px;" src="{{ product.image.url }}" class="card-img-top"
+                                 alt="..."></td>
+                        <td>{{ product.name_of_product }}</td>
+                        <td>{{ product.size }}</td>
+                        <td>{{ product.prod_type }}</td>
+                        <td>{{ product.availability_status }}</td>
+                        <td>{{ product.description_of_product }}</td>
+                        <td class="project-actions text-center">
+                            <a class="btn btn-info btn-sm update_contract" href="{% url 'update_clothes' product.id %}"
+                               title="Edit clothes">
+                                <i class="fas fa-pencil-alt">
+                                    Edit
+                                </i>
+                            </a>
+                            <a class="btn btn-warning btn-sm" href="{% url 'create_clothes' %}"
+                               title="Add clothes">
+                                <i class="fas fa-plus-square">
+                                    Add
+                                </i>
+                            </a>
+                            <a class="btn btn-danger btn-sm delete_contract"
+                               href="{% url 'delete_clothes' product.id %}"
+                               title="Delete clothes">
+                                <i class="fas fa-trash">
+                                    Delete
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <!-- start rows for accessories-->
+                {% for accessory in accessories %}
+                    <tr>
+                        <td><img style="height: 50px;width: 50px;" src="{{ accessory.image.url }}" class="card-img-top"
+                                 alt="..."></td>
+                        <td>{{ accessory.name_of_product }}</td>
+                        <td> - </td>
+                        <td>{{ accessory.prod_type }}</td>
+                        <td>{{ accessory.availability_status }}</td>
+                        <td>{{ accessory.description_of_product }}</td>
+                        <td class="project-actions text-center">
+                            <a class="btn btn-info btn-sm update_contract" href="{% url 'update_accessories' accessory.id %}"
+                               title="Edit clothes">
+                                <i class="fas fa-pencil-alt">
+                                    Edit
+                                </i>
+                            </a>
+                            <a class="btn btn-warning btn-sm" href="{% url 'create_accessories' %}"
+                               title="Add clothes">
+                                <i class="fas fa-plus-square">
+                                    Add
+                                </i>
+                            </a>
+                            <a class="btn btn-danger btn-sm delete_contract"
+                               href="{% url 'delete_accessories' accessory.id %}"
+                               title="Delete clothes">
+                                <i class="fas fa-trash">
+                                    Delete
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    {% endblock %}
+</section>

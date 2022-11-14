@@ -1,28 +1,27 @@
 {% extends 'base.html' %}
-
-{% block title %} Updated {{ storeclothes }}{% endblock %}
+{% block title %} Add clothes products {%  endblock %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="text-center"> Update - {{ storeclothes }}</h3>
-                    </div>
-
-                    <form method="post">
-                        {% csrf_token %}
-                        <div class="card-body">
-                            {{ form.as_p }}
-                        </div>
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-success">Update</button>
-                        </div>
-                    </form>
-                </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <br>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Update Clothes items</h3>
             </div>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+               <div class="card-body">
+                   {{ form.as_p }}
+               </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
         </div>
     </div>
+</div>
 
 {% endblock %}

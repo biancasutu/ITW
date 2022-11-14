@@ -67,25 +67,13 @@
                         </li>
                     </ul>
                 </li>
-                {% if perms.store.add_storeclothes or perms.store.create_storeaccessories %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Administration
-                    </a>
-                    <ul class="dropdown-menu">
-                        <a href="{% url 'create_clothes' %}" class="btn btn-outline-success me-2">Add clothing product</a>
-                        <a href="{% url 'create_accessories' %}" class="btn btn-outline-success me-2">Add accesory product</a>
-                        {% endif %}
-{#                        <a href="{% url 'update_clothes' %}" class="btn btn-outline-success me-2">Update clothing product</a>#}
-{#                        <a href="{% url 'update_accessories' %}" class="btn btn-outline-success me-2">Update accesory product</a>#}
-{#                        <a href="{% url 'delete-clothes' %}" class="btn btn-outline-success me-2">Delete clothing product</a>#}
-{#                        <a href="{% url 'delete_accessories' %}" class="btn btn-outline-success me-2">Delete accesory product</a>#}
-                    </ul>
+                {% if perms.store.add_storeclothes or perms.store.create_storeaccessories or perms.store.change_storeclothes or perms.store.delete_storeclothes or perms.store.create_storeaccessories or perms.store.change_storeaccessories or store.delete_storeaccessories%}
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'product_administration' %}">Administration</a>
                 </li>
+                {% endif %}
             </ul>
 
-            {#            Shopping Cart#}
 
             <div class="btn-group">
                 <button type="button" class="btn btn-outline-warning "
@@ -93,7 +81,7 @@
                     Cart
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{% url 'show_cart' %}">Cart</a></li>
+{#                    <li><a class="dropdown-item" href="{% url 'show_cart' %}">Cart</a></li>#}
                 </ul>
             </div>
 
@@ -115,11 +103,6 @@
                 <a href="{% url 'sign_up' %}" class="btn btn-outline-secondary">Sign up</a>
             {% endif %}
 
-
-            {#            <form class="d-flex" role="search">#}
-            {#                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
-            {#                <button class="btn btn-outline-success" type="submit">Search</button>#}
-            {#            </form>#}
         </div>
     </div>
 </nav>
