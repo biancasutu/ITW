@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Clothes {% endblock %}
+{% block title %} All products {% endblock %}
 <section class="bg-img-all_products">
 {% block content %}
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -13,7 +13,12 @@
                         <p class="card-text">Type: {{ product.prod_type }}</p>
                         <p class="card-text">Availability: {{ product.availability_status }}</p>
                         <p class="card-text">Description {{ product.description_of_product }}</p>
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <form method="post" action="{% url 'add_to_card' %}">
+                            {% csrf_token %}
+                            <input type="text" name="clothes_id" value={{ product.id }} hidden>
+                            <button type="submit" class="btn btn-primary">Add to cart</button>
+                        </form>
+
                     </div>
                 </div>
             </div>

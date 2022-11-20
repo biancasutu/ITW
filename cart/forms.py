@@ -1,12 +1,12 @@
 from django import forms
 from django.forms import TextInput, DateInput
 
-from cart.models import Cart, Orders
+from cart.models import ShoppingCart, Orders
 
 
 class CartForm(forms.ModelForm):
     class Meta:
-        model = Cart
+        model = ShoppingCart
         fields = ['clothes_id', 'accessories_id', 'number_of_products_added', 'price', 'clothes_size', 'order_id']
 
         widgets = {

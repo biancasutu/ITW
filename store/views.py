@@ -86,7 +86,6 @@ def get_filtered(request, acc_name):
     return render(request, 'store/accessories.html', {'all_accessories': context})
 
 
-
 def get_all_products(request):
     clothes = StoreClothes.objects.all()
     accessories = StoreAccessories.objects.all()

@@ -9,7 +9,6 @@ class Product(models.Model):
     number_of_products = models.IntegerField()
     image = models.ImageField(default='img_not_found.png')  # pip install Pillow (library pt procesare imagini in python)
 
-
     @property
     def availability_status(self):
         if self.number_of_products > 0:
@@ -26,7 +25,6 @@ class StoreClothes(Product):
 
     def __str__(self):
         return self.name_of_product
-
 
 
 class StoreAccessories(Product):

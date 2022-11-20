@@ -11,9 +11,9 @@ class Orders(models.Model):  # Bon, tabela cu istoricul comenzilor
     date_ordered = models.DateTimeField(auto_now=True)
 
 
-class Cart(models.Model):
-    clothes_id = models.ForeignKey(StoreClothes, on_delete=models.CASCADE)
-    accessories_id = models.ForeignKey(StoreAccessories, on_delete=models.CASCADE)
+class ShoppingCart(models.Model):
+    clothes_id = models.ForeignKey(StoreClothes, on_delete=models.CASCADE, null=True, blank=True)
+    accessories_id = models.ForeignKey(StoreAccessories, on_delete=models.CASCADE, null=True, blank=True)
     number_of_products_added = models.IntegerField()
     price = models.IntegerField()
     clothes_size = models.CharField(max_length=2)
@@ -21,8 +21,16 @@ class Cart(models.Model):
     # availability_status = models.ForeignKey(Product, on_delete=models.CASCADE)
     # order_cart = models.ManyToManyField(Orders, on_delete=models.CASCADE)
 
+    @property
     def calculate_price(self):
         self.price *= self.number_of_products_added
+        return self.price
+
+    def __str__(self):
+        if self.clothes_id:
+            return self.clothes_id.name_of_product
+        elif self.accessories_id:
+            return self.accessories_id.name_of_product
 
 
 
