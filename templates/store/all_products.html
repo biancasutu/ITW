@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block title %} All products {% endblock %}
-<section class="bg-img-all_products">
+{#<section class="">#}
 {% block content %}
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for product in clothes %}
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; background-color: rgba(245, 245, 245, 1); opacity: 4;">
                     <img src="{{ product.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
@@ -15,8 +15,10 @@
                         <p class="card-text">Description {{ product.description_of_product }}</p>
                         <form method="post" action="{% url 'add_to_card' %}">
                             {% csrf_token %}
-                            <input type="text" name="clothes_id" value={{ product.id }} hidden>
-                            <button type="submit" class="btn btn-primary">Add to cart</button>
+                            <input type="text" name="clothes_id" value={{ product }} hidden>
+                            <button type="submit" class="btn btn-warning">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 2rem"></i>
+                            </button>
                         </form>
 
                     </div>
@@ -41,4 +43,4 @@
         {% endfor %}
     </div>
 {% endblock %}
-</section>
+{#</section>#}
