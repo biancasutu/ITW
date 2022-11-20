@@ -14,6 +14,7 @@ class Orders(models.Model):  # Bon, tabela cu istoricul comenzilor
 class ShoppingCart(models.Model):
     clothes_id = models.ForeignKey(StoreClothes, on_delete=models.CASCADE, null=True, blank=True)
     accessories_id = models.ForeignKey(StoreAccessories, on_delete=models.CASCADE, null=True, blank=True)
+    # color = models.ForeignKey(StoreClothes, on_delete=models.CASCADE, null=True, blank=True)
     number_of_products_added = models.IntegerField()
     price = models.IntegerField()
     clothes_size = models.CharField(max_length=2)

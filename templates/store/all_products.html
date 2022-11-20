@@ -10,8 +10,11 @@
                     <div class="card-body">
                         <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
                         <p class="card-text">Size: {{ product.size }}</p>
+                        <p class="card-text">Color: {{ product.color }}</p>
                         <p class="card-text">Type: {{ product.prod_type }}</p>
-                        <p class="card-text">Availability: {{ product.availability_status }}</p>
+{#                        {% if umber_of_products > 5 %}#}
+                        <p class="card-text" style="color: forestgreen">{{ product.availability_status }}</p>
+{#                        {% endif %}#}
                         <p class="card-text">Description {{ product.description_of_product }}</p>
                         <form method="post" action="{% url 'add_to_card' %}">
                             {% csrf_token %}
@@ -36,7 +39,13 @@
                         <p class="card-text">Price: {{ accessory.price }}</p>
                         <p class="card-text">Type: {{ accessory.prod_type }}</p>
                         <p class="card-text">Description: {{ accessory.description }}</p>
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <form method="post" action="{% url 'add_to_card' %}">
+                            {% csrf_token %}
+                            <input type="text" name="clothes_id" value={{ accessory }} hidden>
+                            <button type="submit" class="btn btn-warning">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 2rem"></i>
+                            </button>
+                        </form>>
                     </div>
                 </div>
             </div>

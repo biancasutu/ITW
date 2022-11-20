@@ -22,17 +22,16 @@ def create_cart_product(request):
     return redirect('all_products')
 
 
-def create_cart_product_acc(request):
+def create_cart_accesory_item(request):
     if request.method == 'POST':
-        print(request.POST.get('clothes_id'))
-        cloth = StoreAccessories.objects.get(id=int(request.POST.get('clothes_id')))
-        cart_clothes = ShoppingCart(
-            clothes_id=cloth,
+        print(request.POST.get('accesories_id'))
+        acc = StoreAccessories.objects.get(id=int(request.POST.get('accessories_id')))
+        cart_acc = ShoppingCart(
+            accessories_id=acc,
             number_of_products_added=1,
-            price=cloth.price,
-            clothes_size=cloth.size
+            price=acc.price
         )
-        cart_clothes.save()
+        cart_acc.save()
     return redirect('all_products')
 
 

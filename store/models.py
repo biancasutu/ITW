@@ -11,9 +11,11 @@ class Product(models.Model):
 
     @property
     def availability_status(self):
-        if self.number_of_products > 0:
+        if 0 < self.number_of_products < 5:
+            return self.number_of_products
+        elif self.number_of_products >= 5:
             return 'On Stock'
-        return "Out fo Stock"
+        return "Out of Stock"
 
     # availability_status = property(__product_number)
 
@@ -22,6 +24,7 @@ class StoreClothes(Product):
     size = models.CharField(max_length=2)
     prod_type = models.CharField(max_length=40, default='T-Shirt')
     gender = models.CharField(max_length=1, default='M')
+    color = models.CharField(max_length=152, default='Black')
 
     def __str__(self):
         return self.name_of_product
