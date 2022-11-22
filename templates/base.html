@@ -1,4 +1,4 @@
-<!--{%  load static %}-->
+{%  load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +6,51 @@
     <title>{% block title %} {% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!--{#de intrebat trainer de unde preluam partea a 2-a din linkul de mai sus#}-->
-    <link rel="stylesheet" href="{% static 'style/style.css' %}"/>
+
     <script src="https://kit.fontawesome.com/12243e8866.js" crossorigin="anonymous"></script>
     {#linkul de mai sus este pt a folosi icon din libraria font aswesome#}
 </head>
 <body>
 <div class="wrapper">
-{% include 'navbar.html' %}
-{% block content %} {% endblock %}
+    {% include 'navbar.html' %}
+    {% block content %} {% endblock %}
 </div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="row">
+            <div class="footer-col">
+                <h4><b>Company</b></h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4><b>Contact Us</b></h4>
+                <ul>
+                    <li>0727522435</li>
+                    <li>0317522435</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4><b>Get help</b></h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4><b>Follow us</b></h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -23,6 +58,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'style/style.css' %}"/>
 </html>
 
 <!--check check-->

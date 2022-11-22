@@ -8,6 +8,7 @@ class Product(models.Model):
     description_of_product = models.CharField(max_length=500)
     number_of_products = models.IntegerField()
     image = models.ImageField(default='img_not_found.png')  # pip install Pillow (library pt procesare imagini in python)
+    color = models.CharField(max_length=152, default='Black')
 
     @property
     def availability_status(self):
@@ -24,7 +25,6 @@ class StoreClothes(Product):
     size = models.CharField(max_length=2)
     prod_type = models.CharField(max_length=40, default='T-Shirt')
     gender = models.CharField(max_length=1, default='M')
-    color = models.CharField(max_length=152, default='Black')
 
     def __str__(self):
         return self.name_of_product
