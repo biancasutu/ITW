@@ -45,7 +45,6 @@ class ClothesUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView)
     permission_required = 'store.change_storeclothes'
 
 
-
 class ClothesDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'store/delete_clothes.html'
     model = StoreClothes

@@ -22,8 +22,8 @@ class ShoppingCart(models.Model):
 
     @property
     def calculate_price(self):
-        self.price *= self.number_of_products_added
-        return self.price
+        self.prod_price = self.price * self.number_of_products_added
+        return self.prod_price
 
     def __str__(self):
         if self.clothes_id:

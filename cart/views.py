@@ -65,6 +65,18 @@ class CartListView(ListView):
         return context
 
 
+def cart_list(request):
+    cart_items = ShoppingCart.objects.all()
+    total = 0
+    for elem in cart_items:
+        total += elem.price * elem.number_of_products_added
+    context_vars = {
+        'cart_items': cart_items,
+        'total': total
+    }
+    return render(request, 'cart/show_cart.html', context_vars)
+
+
 class CartUpdateView(UpdateView):
     template_name = 'cart/update_cart.html'
     model = ShoppingCart
