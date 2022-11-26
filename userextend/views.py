@@ -27,19 +27,19 @@ class UserCreateView(CreateView):
 
         if form.is_valid() and not form.errors:
             new_user = form.save()
-
-            detailst_user = {
-                'user': new_user,
-                'username': new_user.username
-            }
-            subject = 'Creatd a new account!'
-            message = get_template('userextend/mail_create_new_user.html').render(detailst_user)
-            from_email = EMAIL_HOST_USER
-            email_to = [new_user.email]
-
-            email = EmailMessage(subject, message, from_email, email_to)
-            email.content_subtype = 'html'  # main content is now text/html
-            email.send()
+            #
+            # detailst_user = {
+            #     'user': new_user,
+            #     'username': new_user.username
+            # }
+            # subject = 'Creatd a new account!'
+            # message = get_template('userextend/mail_create_new_user.html').render(detailst_user)
+            # from_email = EMAIL_HOST_USER
+            # email_to = [new_user.email]
+            #
+            # email = EmailMessage(subject, message, from_email, email_to)
+            # email.content_subtype = 'html'  # main content is now text/html
+            # email.send()
 
         return redirect('homepage')
 

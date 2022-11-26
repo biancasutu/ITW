@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from cart.models import ShoppingCart
+from .models import ShoppingCartRenamed
 
 # Register your models here.
 
-admin.site.register(ShoppingCart)
+admin.site.register(ShoppingCartRenamed)

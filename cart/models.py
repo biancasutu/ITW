@@ -11,7 +11,7 @@ class Orders(models.Model):  # Bon, tabela cu istoricul comenzilor
     date_ordered = models.DateTimeField(auto_now=True)
 
 
-class ShoppingCart(models.Model):
+class ShoppingCartRenamed(models.Model):
     clothes_id = models.ForeignKey(StoreClothes, on_delete=models.CASCADE, null=True, blank=True)
     accessories_id = models.ForeignKey(StoreAccessories, on_delete=models.CASCADE, null=True, blank=True)
     number_of_products_added = models.IntegerField()
@@ -20,10 +20,10 @@ class ShoppingCart(models.Model):
     order_id = models.UUIDField(default=uuid.uuid4, primary_key=True)
     # order_cart = models.ManyToManyField(Orders, on_delete=models.CASCADE)
 
-    @property
-    def calculate_price(self):
-        self.prod_price = self.price * self.number_of_products_added
-        return self.prod_price
+    # @property
+    # def calculate_price(self):
+    #     self.prod_price = self.price * self.number_of_products_added
+    #     return self.prod_price
 
     def __str__(self):
         if self.clothes_id:
