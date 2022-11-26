@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DetailView, DeleteView
@@ -12,7 +13,7 @@ def create_cart_product(request, item_id):
     if request.method == 'POST':
         print(request.POST.get('clothes_id'))
         existing_cloth = ShoppingCart.objects.filter(clothes_id_id=item_id).first()
-        if existing_cloth:
+        if existing_cloth is not None:
             existing_cloth.number_of_products_added += 1
             existing_cloth.save()
         else:
@@ -21,7 +22,8 @@ def create_cart_product(request, item_id):
                 clothes_id=cloth,
                 number_of_products_added=1,
                 price=cloth.price,
-                clothes_size=cloth.size
+                clothes_size=cloth.size,
+                # availability=cloth.availability_status
             )
             cart_clothes.save()
     return redirect('all_products')
@@ -31,7 +33,7 @@ def create_cart_accesory_item(request, item_id):
     if request.method == 'POST':
         print(request.POST.get('accesories_id'))
         existing_accessory = ShoppingCart.objects.filter(accessories_id_id=item_id).first()
-        if existing_accessory:
+        if existing_accessory is not None:
             existing_accessory.number_of_products_added += 1
             existing_accessory.save()
         else:
@@ -48,7 +50,19 @@ def create_cart_accesory_item(request, item_id):
 class CartListView(ListView):
     template_name = 'cart/show_cart.html'
     model = ShoppingCart
-    context_object_name = 'cart_items'
+    cart_items = ShoppingCart.objects.all()
+    total = 0
+    for elem in cart_items:
+        total += elem.price * elem.number_of_products_added
+    context_vars = {
+        'cart_items': cart_items,
+        'total': total
+    }
+
+    def get_context_data(self, **kwargs):
+        context = super(CartListView, self).get_context_data(**kwargs)
+        context.update(CartListView.context_vars)
+        return context
 
 
 class CartUpdateView(UpdateView):

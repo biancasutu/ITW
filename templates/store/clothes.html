@@ -1,18 +1,53 @@
 {% extends 'base.html' %}
 {% block title %} Clothes {% endblock %}
 {% block content %}
-    {% for product in clothes %}
-         <div class="card" style="width: 18rem;">
-        <img src="{{ product.image.url }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
-            <p class="card-text">Product size: {{ product.size}}</p>
-            <p class="card-text">Product Type: {{ product.prod_type }}</p>
-            <p class="card-text">Availability: {{ product.availability_status }}</p>
-            <p class="card-text">Product size: {{ access.description_of_product}}</p>
-            <a href="" class="btn btn-primary">Add to cart</a>
+    <div class="container">
+        <div class="card-group">
+            {% for product in clothes %}
+                <div class="card" style="width: 18rem;margin: 5px;">
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name_of_product }}</h5>
+                        <p class="card-text">Product size: {{ product.size }}</p>
+                        <p class="card-text">Product Type: {{ product.prod_type }}</p>
+                        <p class="card-text">Availability: {{ product.availability_status }}</p>
+                        <p class="card-text">Description: {{ product.description_of_product }}</p>
+                        <form method="post" action="{% url 'cart_add_clothes' product.id %}">
+                            {% csrf_token %}
+                            <input type="text" name="clothes_id" value={{ product }} hidden>
+                            <button type="submit" class="btn btn-warning">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 2rem"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
-
-    {% endfor %}
 {% endblock %}
+
+<style>
+    #module {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+
+    #module #collapseExample.collapse:not(.show) {
+        display: block;
+        height: 3rem;
+        overflow: hidden;
+    }
+
+    #module #collapseExample.collapsing {
+        height: 3rem;
+    }
+
+    #module a.collapsed::after {
+        content: '+ Show More';
+    }
+
+    #module a:not(.collapsed)::after {
+        content: '- Show Less';
+    }
+</style>

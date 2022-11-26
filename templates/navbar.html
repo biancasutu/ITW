@@ -2,7 +2,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: mintcream">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">ITW</a>
+        <a class="logo-image" href="#">
+            <img src="static/images/logo.png" style="display: inline-block;">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -69,19 +71,19 @@
                         </li>
                     </ul>
                 </li>
-                {% if perms.store.add_storeclothes or perms.store.create_storeaccessories or perms.store.change_storeclothes or perms.store.delete_storeclothes or perms.store.create_storeaccessories or perms.store.change_storeaccessories or store.delete_storeaccessories%}
+                {% if perms.store.add_storeclothes or perms.store.create_storeaccessories or perms.store.change_storeclothes or perms.store.delete_storeclothes or perms.store.create_storeaccessories or perms.store.change_storeaccessories or store.delete_storeaccessories %}
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'product_administration' %}">Administration</a>
-                </li>
+                        <a class="nav-link active" aria-current="page" href="{% url 'product_administration' %}">Administration</a>
+                    </li>
                 {% endif %}
             </ul>
 
 
             <div class="btn-group">
                 <a href="{% url 'show_cart' %}" aria-expanded="false">
-{#                    <img src="{% static 'images/shopping_cart_img.png' %}" style="width: 40px" class="rounded-circle">#}
+                    {#                    <img src="{% static 'images/shopping_cart_img.png' %}" style="width: 40px" class="rounded-circle">#}
                     <i class="fa-solid fa-cart-shopping" style="font-size: 2rem; color:#000000;"></i>
-{#                    Cart#}
+                    {#                    Cart#}
                 </a>
             </div>
 
@@ -90,8 +92,8 @@
             {% if request.user.is_authenticated %}
                 <div class="btn-group">
                     <a href="#" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-{#                        My profile, {{ request.user.username }}#}
+                       aria-expanded="false">
+                        {#                        My profile, {{ request.user.username }}#}
                         <img src="{% static 'images/my_profile_icon.png' %}" style="width: 40px" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">

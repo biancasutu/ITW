@@ -14,7 +14,7 @@ class UserExtendForm(UserCreationForm):
             'first_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your first name'}),
             'last_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your last name'}),
             'email': EmailInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your email'}),
-            'username': TextInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your email'}),
+            'username': TextInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your username'}),
             'email_confirmation': TextInput(attrs={'class': 'form-control', 'placeholder': 'Please confirm your email'}),
             'date_of_birth': DateInput(attrs={'class': 'form-control', 'type': 'date'}),
             'gender': Select(attrs={'class': 'form-control'}),

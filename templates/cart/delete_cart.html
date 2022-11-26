@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
-
-{% block title %} Delete - {{ storeaccessories.name_of_product }} {% endblock %}
+{% block title %} Delete {% endblock %}
 
 {% block content %}
     <div class="container-fluid">
@@ -11,12 +9,6 @@
                     <div class="card">
                         <form method="post">
                             {% csrf_token %}
-                            <div class="card-body">
-                                <h3 class="text-center">Are you sure to delete {{ storeaccessories.name_of_product }}?</h3>
-                            </div>
-                            <div class="card-footer text-center">
-                                <button type="submit" class="btn btn-success">Yes</button>
-                            </div>
                         </form>
                     </div>
             </div>

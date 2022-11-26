@@ -3,12 +3,22 @@ from django.db import models
 
 
 class Product(models.Model):
+    COLORS = (
+        ('black', 'Black'),
+        ('white', 'White'),
+        ('purple', 'Purple'),
+        ('orange', 'Orange'),
+        ('red', 'Red'),
+        ('mediumblue', 'Blue'),
+        ('mediumseagreen', 'Green'),
+        ('deeppink', 'Pink')
+    )
     name_of_product = models.CharField(max_length=50)
     price = models.IntegerField()
     description_of_product = models.CharField(max_length=500)
     number_of_products = models.IntegerField()
     image = models.ImageField(default='img_not_found.png')  # pip install Pillow (library pt procesare imagini in python)
-    color = models.CharField(max_length=152, default='Black')
+    color = models.CharField(max_length=152, default='black', choices=COLORS)
 
     @property
     def availability_status(self):
@@ -17,8 +27,6 @@ class Product(models.Model):
         elif self.number_of_products >= 5:
             return 'On Stock'
         return "Out of Stock"
-
-    # availability_status = property(__product_number)
 
 
 class StoreClothes(Product):

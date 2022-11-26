@@ -33,8 +33,9 @@
                           <a href="#" class="d-block text-dark">{{ item }}</a>
                           <small>
                             <span class="text-muted">Color:</span>
-                            <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#e81e2c;"></span> &nbsp;
+                            <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:{{ item.clothes_id.color }};"></span> &nbsp;
                             <span class="text-muted">Size: </span> {{ item.clothes_size }}
+{#                            <span class="text_muted"></span>{{ item.availability }}#}
                           </small>
                             {% else %}
                             <img src="{{ item.accessories_id.image.url }}" class="d-block ui-w-40 ui-bordered mr-4" alt="">
@@ -42,7 +43,7 @@
                           <a href="#" class="d-block text-dark">{{ item }}</a>
                           <small>
                             <span class="text-muted">Color:</span>
-                            <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#e81e2c;"></span>
+                            <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:{{ item.accessories_id.color }};"></span>
                           </small>
                             {% endif %}
                         </div>
@@ -66,7 +67,7 @@
             <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
               <div class="mt-4">
                 <label class="text-muted font-weight-normal">Promocode</label>
-                <input type="text" placeholder="ABC" class="form-control">
+                  <input type="text" placeholder="ABC" class="form-control">
               </div>
               <div class="d-flex">
                 <div class="text-right mt-4 mr-5">
@@ -75,7 +76,7 @@
                 </div>
                 <div class="text-right mt-4">
                   <label class="text-muted font-weight-normal m-0">Total price</label>
-                  <div class="text-large"><strong>$1164.65</strong></div>
+                  <div class="text-large"><strong>{{ total }}</strong></div>
                 </div>
               </div>
             </div>

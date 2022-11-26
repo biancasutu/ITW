@@ -1,26 +1,27 @@
 {% extends 'base.html' %}
 {% block title %} Accessories {% endblock %}
 {% block content %}
-    {% for accessory in accessories %}
-         <div class="card" style="width: 18rem;">
-        <img src="{{ accessory.image.url }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Product name: {{ accessory.name_of_product }}</h5>
-            <p class="card-text">Price: {{ accessory.price}}</p>
-            <p class="card-text">Type: {{ accessory.prod_type }}</p>
-            <p class="card-text">Availability: {{ accessory.availability_status }}</p>
-            <p class="card-text">Description: {{ accessory.description_of_product}}</p>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-        </div>
+    <div class="card-group">
+        {% for accessory in all_accessories %}
+            <div class="card" style="max-width: 18rem;">
+                <img src="{{ accessory.image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ accessory.name_of_product }}</h5>
+                    <p class="card-text">Price: {{ accessory.price }}</p>
+                    <p class="card-text">Type: {{ accessory.prod_type }}</p>
+                    <p class="card-text">Availability: {{ accessory.availability_status }}</p>
+                    <p class="card-text">Description: {{ accessory.description_of_product }}</p>
+                    <form method="post" action="{% url 'cart_add_accesories' accessory.id %}">
+                            {% csrf_token %}
+                            <input type="text" name="clothes_id" value={{ accessory }} hidden>
+                            <button type="submit" class="btn btn-warning">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 2rem"></i>
+                            </button>
+                        </form>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-{#    <tr>#}
-{#    <th scope="row">1</th>#}
-{#    <td>{{ accessory.name_of_product }}</td>#}
-{#    <td>{{ accessory.price }}</td>#}
-{#    <td>{{ accessory.availability_status }}</td>#}
-{#    <td>{{ accessory.prod_type }}</td>#}
-{#    <td>{{ accessory.description_of_product }}</td>#}
-    {% endfor %}
 {% endblock %}
 
 {#name_of_product = models.CharField(max_length=30)#}

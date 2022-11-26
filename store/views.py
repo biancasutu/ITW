@@ -77,7 +77,7 @@ class AccessoriesDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteV
 
 
 def get_filtered(request, acc_name):
-    if acc_name in ['Rackets', 'Headbands']:
+    if acc_name in ['Racket', 'Headband']:
         context = StoreAccessories.objects.filter(prod_type=acc_name)
         return render(request, 'store/accessories.html', {'all_accessories': context})
 

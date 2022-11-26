@@ -8,7 +8,7 @@ class ClothesForm(forms.ModelForm):
     class Meta:
         model = StoreClothes
         # fields = '__all__' # toate fieldurile, ordinea va fi cea din models.py
-        fields = ['name_of_product', 'price', 'description_of_product',
+        fields = ['name_of_product', 'price', 'description_of_product', 'color',
                   'size', 'prod_type', 'gender', 'number_of_products', 'image']
 
         widgets = {
@@ -33,7 +33,7 @@ class ClothesForm(forms.ModelForm):
 class AccessoriesForm(forms.ModelForm):
     class Meta:
         model = StoreAccessories
-        fields = ['name_of_product', 'price', 'description_of_product', 'prod_type', 'image']
+        fields = ['name_of_product', 'price', 'description_of_product', 'prod_type', 'color', 'image']
 
         widgets = {
             'name_of_product': TextInput(attrs={'placeholder': 'Product name', 'class': 'form-control'}),

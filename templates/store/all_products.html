@@ -8,7 +8,7 @@
                 <div class="card" style="width: 18rem; background-color: rgba(245, 245, 245, 1); opacity: 4;">
                     <img src="{{ product.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Product name: {{ product.name_of_product }}</h5>
+                        <h5 class="card-title">{{ product.name_of_product }}</h5>
                         <p class="card-text">Price: {{ product.price }} lei</p>
                         <p class="card-text">Size: {{ product.size }}</p>
                         <p class="card-text">Color: {{ product.color }}</p>
@@ -35,7 +35,7 @@
                 <div class="card" style="width: 18rem;">
                     <img src="{{ accessory.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Product name: {{ accessory.name_of_product }}</h5>
+                        <h5 class="card-title">{{ accessory.name_of_product }}</h5>
                         <p class="card-text">Price: {{ accessory.price }} lei</p>
                         <p class="card-text">Color: {{ accessory.color }}</p>
                         <p class="card-text">Type: {{ accessory.prod_type }}</p>
