@@ -20,10 +20,10 @@ class ShoppingCartRenamed(models.Model):
     order_id = models.UUIDField(default=uuid.uuid4, primary_key=True)
     # order_cart = models.ManyToManyField(Orders, on_delete=models.CASCADE)
 
-    # @property
-    # def calculate_price(self):
-    #     self.prod_price = self.price * self.number_of_products_added
-    #     return self.prod_price
+    @property
+    def calculate_price(self):
+        self.prod_price = self.price * self.number_of_products_added
+        return self.prod_price
 
     def __str__(self):
         if self.clothes_id:
