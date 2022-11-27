@@ -6,25 +6,26 @@
         {% for product in clothes %}
             <div class="col">
                 <div class="card" style="width: 18rem; background-color: rgba(245, 245, 245, 1); opacity: 4;">
-                    <img src="{{ product.image.url }}" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <img src="{{ product.image.url }}" class="card-img-top" style="height: 18rem; object-fit: contain">
+                    <div class="card-body" style="height: 300px !important; overflow-y: hidden">
                         <h5 class="card-title">{{ product.name_of_product }}</h5>
                         <p class="card-text">Price: {{ product.price }} lei</p>
                         <p class="card-text">Size: {{ product.size }}</p>
                         <p class="card-text">Color: {{ product.color }}</p>
                         <p class="card-text">Type: {{ product.prod_type }}</p>
-{#                        {% if number_of_products > 0 and number_of_products < 5 %}#}
+                        {#                        {% if number_of_products > 0 and number_of_products < 5 %}#}
                         <p class="card-text" style="color: forestgreen">{{ product.availability_status }}</p>
-{#                        {% endif %}#}
+                        {#                        {% endif %}#}
                         <p class="card-text">Description: {{ product.description_of_product }}</p>
-                        <form method="post" action="{% url 'cart_add_clothes' product.id %}">
-                            {% csrf_token %}
-                            <input type="text" name="clothes_id" value={{ product }} hidden>
-                            <button type="submit" class="btn btn-warning">
-                            <i class="fa-solid fa-cart-shopping" style="font-size: 2rem"></i>
-                            </button>
-                        </form>
+
                     </div>
+                    <form method="post" action="{% url 'cart_add_clothes' product.id %}">
+                        {% csrf_token %}
+                        <input type="text" name="clothes_id" value={{ product }} hidden>
+                        <button type="submit" class="btn btn-warning col-12">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 2rem"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         {% endfor %}
@@ -32,8 +33,8 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for accessory in accessories %}
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ accessory.image.url }}" class="card-img-top" alt="...">
+                <div class="card" style="width: 18rem; background-color: rgba(245, 245, 245, 1); opacity: 4;">
+                    <img src="{{ accessory.image.url }}" class="card-img-top" style="height: 18rem; object-fit: contain">
                     <div class="card-body">
                         <h5 class="card-title">{{ accessory.name_of_product }}</h5>
                         <p class="card-text">Price: {{ accessory.price }} lei</p>
@@ -41,14 +42,15 @@
                         <p class="card-text">Type: {{ accessory.prod_type }}</p>
                         <p class="card-text" style="color: forestgreen">{{ accessory.availability_status }}</p>
                         <p class="card-text">Description: {{ accessory.description_of_product }}</p>
-                        <form method="post" action="{% url 'cart_add_accesories' accessory.id %}">
-                            {% csrf_token %}
-                            <input type="text" name="clothes_id" value={{ accessory }} hidden>
-                            <button type="submit" class="btn btn-warning">
-                            <i class="fa-solid fa-cart-shopping" style="font-size: 2rem"></i>
-                            </button>
-                        </form>
+
                     </div>
+                    <form method="post" action="{% url 'cart_add_accesories' accessory.id %}">
+                        {% csrf_token %}
+                        <input type="text" name="clothes_id" value={{ accessory }} hidden>
+                        <button type="submit" class="btn btn-warning col-12">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 2rem"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         {% endfor %}

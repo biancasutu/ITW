@@ -2,6 +2,15 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
+class Option(models.Model):
+    name = models.CharField(max_length=255)
+
+
+class OptionValue(models.Model):
+    option = models.ForeignKey(Option, on_delete=models.CASCADE)
+    value = models.CharField(max_length=255)
+
+
 class Product(models.Model):
     COLORS = (
         ('black', 'Black'),
@@ -28,6 +37,11 @@ class Product(models.Model):
             return 'On Stock'
         return "Out of Stock"
 
+
+# class ProductConfiguration(models.Model):
+#     stock = models.IntegerField()
+#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+#
 
 class StoreClothes(Product):
     size = models.CharField(max_length=2)

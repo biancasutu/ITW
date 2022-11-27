@@ -9,7 +9,6 @@ from .models import ShoppingCartRenamed
 from store.models import StoreClothes, StoreAccessories
 
 
-
 def create_cart_product(request, item_id):
     if request.method == 'POST':
         print(request.POST.get('clothes_id'))
