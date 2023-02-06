@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'store',
     'userextend',
     'cart',
-    'crispy_forms'
+    'crispy_forms',
+    'coupon'
 ]
 
 CRISPY_TEMPLATE_PACK='bootstrap4'

@@ -9,6 +9,7 @@ from store.models import Product, StoreClothes, StoreAccessories
 class Orders(models.Model):  # Bon, tabela cu istoricul comenzilor
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)  # tabela_coloana -> din tabela user folosesc coloana id
     date_ordered = models.DateTimeField(auto_now=True)
+    used_coupon = models.CharField(max_length=50, blank=True, null=True)
 
 
 class ShoppingCartRenamed(models.Model):

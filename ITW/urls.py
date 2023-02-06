@@ -21,6 +21,7 @@ from django.urls import path, include
 from players import urls
 from userextend import views
 from userextend.forms import AuthenticationNewForm, PasswordResetNewForm, SetPasswordNewForm
+from coupon.api import api_can_use
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,7 +38,8 @@ urlpatterns = [
     ),
     path('', include('django.contrib.auth.urls')),
     path('', include('userextend.urls')),
-    path("cart/", include('cart.urls'))
+    path("cart/", include('cart.urls')),
+    path('api/can_use/', api_can_use, name='api_can_use')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
