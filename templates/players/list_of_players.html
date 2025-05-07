@@ -1,10 +1,57 @@
-{% extends 'base.html' %}
-{% block title %} Players {% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista Jucători</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("{% static 'images/fundal_players.jpg' %}") center/cover no-repeat fixed;
+    }
+    .blur-container {
+      backdrop-filter: blur(2px);
+    }
+  </style>
+</head>
+<body class="bg-transparent text-white">
 
-{% block content %}
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">🎾 Jucători ATP</a>
+    </div>
+  </nav>
 
-{%  for player in players %}
-    <p>player.gender</p>
-{% endfor %}
+  <!-- Conținut principal -->
+  <div class="container py-5 blur-container">
 
-{% endblock %}
+    <h1 class="text-center text-light mb-4">Lista Jucători</h1>
+
+    <!-- Formular de căutare -->
+    <form method="get" action="." class="mb-4 d-flex justify-content-center">
+      <input type="text" name="q" class="form-control w-50 me-2" placeholder="Caută jucător..." value="{{ request.GET.q }}">
+      <button type="submit" class="btn btn-outline-light">Caută</button>
+    </form>
+
+    <!-- Lista de jucători fără fundal alb -->
+    <div>
+      {% if players %}
+        <ul class="list-unstyled fs-5">
+          {% for player in players %}
+            <li class="mb-2">
+              <strong>{{ player.first_name }} {{ player.last_name }}</strong>
+              <span class="text-light">– {{ player.country }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="text-center text-light">⚠️ Nu există jucători care să corespundă căutării.</p>
+      {% endif %}
+    </div>
+
+  </div>
+
+</body>
+</html>

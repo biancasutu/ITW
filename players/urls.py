@@ -1,8 +1,7 @@
 from django.urls import path
-
-from players import views
-
+from .views import PlayerListView, PlayerDetailView
 
 urlpatterns = [
-    path('', views.PlayerListView.as_view(), name='all_players'),  # name = identificator pentru template ul din clasa PlayerListView
+    path('', PlayerListView.as_view(), name='all_players'),
+    path('<int:pk>/', PlayerDetailView.as_view(), name='player_detail'),
 ]
